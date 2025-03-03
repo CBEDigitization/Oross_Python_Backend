@@ -79,6 +79,7 @@ def get_publications():
 
     if response.status_code == 200:
         data = response.json()
+        meta = data.get("meta", {})
         results = []
         for result in data.get("results", []):
             # Build a list of authors with enhanced affiliation details.
@@ -143,7 +144,10 @@ def get_publications():
                 "grant_award_id": grant_award_id,
                 "abstract": abstract
             })
-        return jsonify(results)
+        return jsonify({
+            "meta": meta,
+            "results": results
+        })
     else:
         return jsonify({"error": f"Error: {response.status_code}"})
     

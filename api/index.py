@@ -79,7 +79,13 @@ def get_publications():
 
     if response.status_code == 200:
         data = response.json()
-        meta = data.get("meta", {})
+        meta = { 
+                "count": data.get("meta", {}).get("count"),
+                "db_response_time_ms": data.get("meta", {}).get("db_response_time_ms"),
+                "page": data.get("meta", {}).get("page"),
+                "per_page": data.get("meta", {}).get("per_page"),
+                "total_pages": data.get("meta", {}).get("count", 0) // per_page + (1 if data.get("meta", {}).get("count", 0) % per_page > 0 else 0)
+            }
         results = []
         for result in data.get("results", []):
             # Build a list of authors with enhanced affiliation details.
@@ -129,7 +135,7 @@ def get_publications():
                 "type_of_paper_crossref": result.get("type_crossref"),
                 "publication_details": publication_details,
                 "pdf_url_to_openAlex": result.get("id"),
-                "title_as_dispalyName": result.get("display_name"),
+                "title_as_displayName": result.get("display_name"),
                 "is_open_access": is_open_access,
                 "open_access_status": open_access_status,
                 "open_access_url": open_access_url,

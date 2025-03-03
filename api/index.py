@@ -57,7 +57,7 @@ def reconstruct_abstract(inverted_index):
 @app.route("/")
 def index():
     return "Hello form OROSS"
-@app.route("/publications", methods=["GET"])
+@app.route("/works", methods=["GET"])
 def get_publications():
     """
     Endpoint to retrieve publications from the University of Johannesburg with pagination.

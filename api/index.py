@@ -275,7 +275,45 @@ def works_by_author():
         "works": works_list
     })
 
+@app.route("/search_by_title", methods=["GET"])
+def search_by_title():
+    """
+    Searches works from OpenAlex by title.
+    Expects query parameters:
+      - title: The title (or part of it) to search for.
+      - page: (optional) Page number for pagination (default is 1).
+      - per_page: (optional) Number of results per page (default is 10).
+    """
+    title = request.args.get("title", "", type=str)
+    page = request.args.get("page", default=1, type=int)
+    per_page = request.args.get("per_page", default=10, type=int)
     
+    url = "https://api.openalex.org/works"
+    params = {
+        "search": title,
+        "page": page,
+        "per_page": per_page
+    }
+    headers = {
+        "User-Agent": "MyScript (your-email@example.com)"
+    }
+    response = requests.get(url, params=params, headers=headers)
+    
+    if response.status_code == 200:
+        data = response.json()
+        works_list = []
+        for work in data.get("results", []):
+            works_list.append({
+                "id": work.get("id"),
+                "title": work.get("display_name") or work.get("title"),
+                "doi": work.get("doi"),
+                "publication_year": work.get("publication_year")
+            })
+        return jsonify(works_list)
+    else:
+        print("Error:", response.status_code, response.text)
+        return jsonify([]), response.status_code
+
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -185,6 +185,72 @@
         "documentation": {}
     },
     {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "getLogger",
+        "importPath": "logging",
+        "description": "logging",
+        "isExtraImport": true,
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "mktime",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "struct_time",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
         "label": "annotations",
         "importPath": "__future__",
         "description": "__future__",
@@ -1946,23 +2012,6 @@
         "documentation": {}
     },
     {
-        "label": "logging",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "logging",
-        "description": "logging",
-        "detail": "logging",
-        "documentation": {}
-    },
-    {
-        "label": "getLogger",
-        "importPath": "logging",
-        "description": "logging",
-        "isExtraImport": true,
-        "detail": "logging",
-        "documentation": {}
-    },
-    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -2393,55 +2442,6 @@
         "description": "io",
         "isExtraImport": true,
         "detail": "io",
-        "documentation": {}
-    },
-    {
-        "label": "time",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "time",
-        "description": "time",
-        "detail": "time",
-        "documentation": {}
-    },
-    {
-        "label": "time",
-        "importPath": "time",
-        "description": "time",
-        "isExtraImport": true,
-        "detail": "time",
-        "documentation": {}
-    },
-    {
-        "label": "mktime",
-        "importPath": "time",
-        "description": "time",
-        "isExtraImport": true,
-        "detail": "time",
-        "documentation": {}
-    },
-    {
-        "label": "struct_time",
-        "importPath": "time",
-        "description": "time",
-        "isExtraImport": true,
-        "detail": "time",
-        "documentation": {}
-    },
-    {
-        "label": "time",
-        "importPath": "time",
-        "description": "time",
-        "isExtraImport": true,
-        "detail": "time",
-        "documentation": {}
-    },
-    {
-        "label": "time",
-        "importPath": "time",
-        "description": "time",
-        "isExtraImport": true,
-        "detail": "time",
         "documentation": {}
     },
     {
@@ -5981,7 +5981,7 @@
         "kind": 2,
         "importPath": ".vercel.cache.index.api.index",
         "description": ".vercel.cache.index.api.index",
-        "peekOfCode": "def index():\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])\ndef get_works():\n    \"\"\"\n    Endpoint to retrieve publications from the University of Johannesburg with pagination.\n    A query parameter 'page' can be provided by the frontend to load different pages.\n    \"\"\"\n    # Get the page number from the query parameters; default to 1 if not provided.\n    page = request.args.get(\"page\", default=1, type=int)",
+        "peekOfCode": "def index():\n    logger.info(\"Request to index endpoint\")\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])\ndef get_works():\n    \"\"\"\n    Endpoint to retrieve publications from the University of Johannesburg with pagination.\n    A query parameter 'page' can be provided by the frontend to load different pages.\n    \"\"\"\n    start_time = time.time()",
         "detail": ".vercel.cache.index.api.index",
         "documentation": {}
     },
@@ -5990,7 +5990,7 @@
         "kind": 2,
         "importPath": ".vercel.cache.index.api.index",
         "description": ".vercel.cache.index.api.index",
-        "peekOfCode": "def get_works():\n    \"\"\"\n    Endpoint to retrieve publications from the University of Johannesburg with pagination.\n    A query parameter 'page' can be provided by the frontend to load different pages.\n    \"\"\"\n    # Get the page number from the query parameters; default to 1 if not provided.\n    page = request.args.get(\"page\", default=1, type=int)\n    per_page = request.args.get(\"per_page\", default=10, type=int)\n    url = \"https://api.openalex.org/works\"\n    params = {",
+        "peekOfCode": "def get_works():\n    \"\"\"\n    Endpoint to retrieve publications from the University of Johannesburg with pagination.\n    A query parameter 'page' can be provided by the frontend to load different pages.\n    \"\"\"\n    start_time = time.time()\n    # Get the page number from the query parameters; default to 1 if not provided.\n    page = request.args.get(\"page\", default=1, type=int)\n    per_page = request.args.get(\"per_page\", default=10, type=int)\n    logger.info(f\"Request to get_works endpoint - page: {page}, per_page: {per_page}\")",
         "detail": ".vercel.cache.index.api.index",
         "documentation": {}
     },
@@ -5999,7 +5999,7 @@
         "kind": 2,
         "importPath": ".vercel.cache.index.api.index",
         "description": ".vercel.cache.index.api.index",
-        "peekOfCode": "def get_authors():\n    \"\"\"\n    Retrieves authors from OpenAlex whose last known institution is the University of Johannesburg.\n    The institution is identified by its OpenAlex ID: https://openalex.org/I24027795.\n    \"\"\"\n    page = request.args.get(\"page\", default=1, type=int)\n    per_page = request.args.get(\"per_page\", default=1, type=int)\n    url = \"https://api.openalex.org/authors\"\n    params = {\n        \"filter\": \"last_known_institutions.id:https://openalex.org/I24027795\",",
+        "peekOfCode": "def get_authors():\n    \"\"\"\n    Retrieves authors from OpenAlex whose last known institution is the University of Johannesburg.\n    The institution is identified by its OpenAlex ID: https://openalex.org/I24027795.\n    \"\"\"\n    start_time = time.time()\n    page = request.args.get(\"page\", default=1, type=int)\n    per_page = request.args.get(\"per_page\", default=1, type=int)\n    logger.info(f\"Request to get_authors endpoint - page: {page}, per_page: {per_page}\")\n    url = \"https://api.openalex.org/authors\"",
         "detail": ".vercel.cache.index.api.index",
         "documentation": {}
     },
@@ -6008,7 +6008,7 @@
         "kind": 2,
         "importPath": ".vercel.cache.index.api.index",
         "description": ".vercel.cache.index.api.index",
-        "peekOfCode": "def test():\n    return jsonify({\"message\": \"Test successful\"})\n@app.route(\"/autocomplete_author\", methods=[\"GET\"])\ndef autocomplete_author():\n    \"\"\"\n    Returns autocomplete suggestions for authors based on partial input.\n    Example usage: /autocomplete_author?author=John\n    \"\"\"\n    partial_name = request.args.get(\"author\")\n    if not partial_name:",
+        "peekOfCode": "def test():\n    logger.info(\"Request to test endpoint\")\n    return jsonify({\"message\": \"Test successful\"})\n@app.route(\"/autocomplete_author\", methods=[\"GET\"])\ndef autocomplete_author():\n    \"\"\"\n    Returns autocomplete suggestions for authors based on partial input.\n    Example usage: /autocomplete_author?author=John\n    \"\"\"\n    start_time = time.time()",
         "detail": ".vercel.cache.index.api.index",
         "documentation": {}
     },
@@ -6017,7 +6017,7 @@
         "kind": 2,
         "importPath": ".vercel.cache.index.api.index",
         "description": ".vercel.cache.index.api.index",
-        "peekOfCode": "def autocomplete_author():\n    \"\"\"\n    Returns autocomplete suggestions for authors based on partial input.\n    Example usage: /autocomplete_author?author=John\n    \"\"\"\n    partial_name = request.args.get(\"author\")\n    if not partial_name:\n        return (\n            jsonify(\n                {",
+        "peekOfCode": "def autocomplete_author():\n    \"\"\"\n    Returns autocomplete suggestions for authors based on partial input.\n    Example usage: /autocomplete_author?author=John\n    \"\"\"\n    start_time = time.time()\n    partial_name = request.args.get(\"author\")\n    logger.info(f\"Request to autocomplete_author endpoint - query: {partial_name}\")\n    if not partial_name:\n        logger.warning(\"autocomplete_author called without author parameter\")",
         "detail": ".vercel.cache.index.api.index",
         "documentation": {}
     },
@@ -6026,7 +6026,7 @@
         "kind": 2,
         "importPath": ".vercel.cache.index.api.index",
         "description": ".vercel.cache.index.api.index",
-        "peekOfCode": "def works_by_author():\n    \"\"\"\n    Fetches works associated with an author using the selected author ID.\n    Example usage: /works_by_author?author_id=AUTH_ID\n    \"\"\"\n    author_id = request.args.get(\"author_id\")\n    if not author_id:\n        return (\n            jsonify(\n                {",
+        "peekOfCode": "def works_by_author():\n    \"\"\"\n    Fetches works associated with an author using the selected author ID.\n    Example usage: /works_by_author?author_id=AUTH_ID\n    \"\"\"\n    start_time = time.time()\n    author_id = request.args.get(\"author_id\")\n    logger.info(f\"Request to works_by_author endpoint - author_id: {author_id}\")\n    if not author_id:\n        logger.warning(\"works_by_author called without author_id parameter\")",
         "detail": ".vercel.cache.index.api.index",
         "documentation": {}
     },
@@ -6035,7 +6035,7 @@
         "kind": 2,
         "importPath": ".vercel.cache.index.api.index",
         "description": ".vercel.cache.index.api.index",
-        "peekOfCode": "def autocomplete_work():\n    \"\"\"\n    Uses the OpenAlex autocomplete endpoint for works to return suggestions\n    based on a partial title provided via the 'title' query parameter.\n    \"\"\"\n    title_query = request.args.get(\"title\")\n    if not title_query:\n        return (\n            jsonify(\n                {",
+        "peekOfCode": "def autocomplete_work():\n    \"\"\"\n    Uses the OpenAlex autocomplete endpoint for works to return suggestions\n    based on a partial title provided via the 'title' query parameter.\n    \"\"\"\n    start_time = time.time()\n    title_query = request.args.get(\"title\")\n    logger.info(f\"Request to autocomplete_work endpoint - query: {title_query}\")\n    if not title_query:\n        logger.warning(\"autocomplete_work called without title parameter\")",
         "detail": ".vercel.cache.index.api.index",
         "documentation": {}
     },
@@ -6044,7 +6044,7 @@
         "kind": 2,
         "importPath": ".vercel.cache.index.api.index",
         "description": ".vercel.cache.index.api.index",
-        "peekOfCode": "def get_work():\n    \"\"\"\n    Fetches detailed information for a work from OpenAlex using the work ID\n    provided via the 'work_id' query parameter.\n    Returns the data in the same format as get_publications.\n    \"\"\"\n    work_id = request.args.get(\"work_id\")\n    if not work_id:\n        return (\n            jsonify(",
+        "peekOfCode": "def get_work():\n    \"\"\"\n    Fetches detailed information for a work from OpenAlex using the work ID\n    provided via the 'work_id' query parameter.\n    Returns the data in the same format as get_publications.\n    \"\"\"\n    start_time = time.time()\n    work_id = request.args.get(\"work_id\")\n    logger.info(f\"Request to get_work endpoint - work_id: {work_id}\")\n    if not work_id:",
         "detail": ".vercel.cache.index.api.index",
         "documentation": {}
     },
@@ -6053,7 +6053,25 @@
         "kind": 2,
         "importPath": ".vercel.cache.index.api.index",
         "description": ".vercel.cache.index.api.index",
-        "peekOfCode": "def search_by_title():\n    \"\"\"\n    Searches works from OpenAlex by title.\n    Expects query parameters:\n      - title: The title (or part of it) to search for.\n      - page: (optional) Page number for pagination (default is 1).\n      - per_page: (optional) Number of results per page (default is 10).\n    \"\"\"\n    title = request.args.get(\"title\", \"\", type=str)\n    page = request.args.get(\"page\", default=1, type=int)",
+        "peekOfCode": "def search_by_title():\n    \"\"\"\n    Searches works from OpenAlex by title.\n    Expects query parameters:\n      - title: The title (or part of it) to search for.\n      - page: (optional) Page number for pagination (default is 1).\n      - per_page: (optional) Number of results per page (default is 10).\n    \"\"\"\n    start_time = time.time()\n    title = request.args.get(\"title\", \"\", type=str)",
+        "detail": ".vercel.cache.index.api.index",
+        "documentation": {}
+    },
+    {
+        "label": "get_author",
+        "kind": 2,
+        "importPath": ".vercel.cache.index.api.index",
+        "description": ".vercel.cache.index.api.index",
+        "peekOfCode": "def get_author():\n    \"\"\"\n    Fetches detailed information for an author from OpenAlex using the author ID\n    provided via the 'author_id' query parameter.\n    \"\"\"\n    start_time = time.time()\n    author_id = request.args.get(\"author_id\")\n    logger.info(f\"Request to get_author endpoint - author_id: {author_id}\")\n    if not author_id:\n        logger.warning(\"get_author called without author_id parameter\")",
+        "detail": ".vercel.cache.index.api.index",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": ".vercel.cache.index.api.index",
+        "description": ".vercel.cache.index.api.index",
+        "peekOfCode": "logger = logging.getLogger('oross_api')\napp = Flask(__name__)\n# CORS(app, resources={r\"/*\": {\"origins\": \"*\"}})\nCORS(app)\nUSER_AGENT = \"MyScript (your-email@example.com)\"\n@app.route(\"/\")\ndef index():\n    logger.info(\"Request to index endpoint\")\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])",
         "detail": ".vercel.cache.index.api.index",
         "documentation": {}
     },
@@ -6062,7 +6080,7 @@
         "kind": 5,
         "importPath": ".vercel.cache.index.api.index",
         "description": ".vercel.cache.index.api.index",
-        "peekOfCode": "app = Flask(__name__)\n# CORS(app, resources={r\"/*\": {\"origins\": \"*\"}})\nCORS(app)\nUSER_AGENT = \"MyScript (your-email@example.com)\"\n@app.route(\"/\")\ndef index():\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])\ndef get_works():\n    \"\"\"",
+        "peekOfCode": "app = Flask(__name__)\n# CORS(app, resources={r\"/*\": {\"origins\": \"*\"}})\nCORS(app)\nUSER_AGENT = \"MyScript (your-email@example.com)\"\n@app.route(\"/\")\ndef index():\n    logger.info(\"Request to index endpoint\")\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])\ndef get_works():",
         "detail": ".vercel.cache.index.api.index",
         "documentation": {}
     },
@@ -6071,7 +6089,7 @@
         "kind": 5,
         "importPath": ".vercel.cache.index.api.index",
         "description": ".vercel.cache.index.api.index",
-        "peekOfCode": "USER_AGENT = \"MyScript (your-email@example.com)\"\n@app.route(\"/\")\ndef index():\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])\ndef get_works():\n    \"\"\"\n    Endpoint to retrieve publications from the University of Johannesburg with pagination.\n    A query parameter 'page' can be provided by the frontend to load different pages.\n    \"\"\"",
+        "peekOfCode": "USER_AGENT = \"MyScript (your-email@example.com)\"\n@app.route(\"/\")\ndef index():\n    logger.info(\"Request to index endpoint\")\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])\ndef get_works():\n    \"\"\"\n    Endpoint to retrieve publications from the University of Johannesburg with pagination.\n    A query parameter 'page' can be provided by the frontend to load different pages.",
         "detail": ".vercel.cache.index.api.index",
         "documentation": {}
     },
@@ -22118,7 +22136,7 @@
         "kind": 2,
         "importPath": "api.index",
         "description": "api.index",
-        "peekOfCode": "def index():\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])\ndef get_works():\n    \"\"\"\n    Endpoint to retrieve publications from the University of Johannesburg with pagination.\n    A query parameter 'page' can be provided by the frontend to load different pages.\n    \"\"\"\n    # Get the page number from the query parameters; default to 1 if not provided.\n    page = request.args.get(\"page\", default=1, type=int)",
+        "peekOfCode": "def index():\n    logger.info(\"Request to index endpoint\")\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])\ndef get_works():\n    \"\"\"\n    Endpoint to retrieve publications from the University of Johannesburg with pagination.\n    A query parameter 'page' can be provided by the frontend to load different pages.\n    \"\"\"\n    start_time = time.time()",
         "detail": "api.index",
         "documentation": {}
     },
@@ -22127,7 +22145,7 @@
         "kind": 2,
         "importPath": "api.index",
         "description": "api.index",
-        "peekOfCode": "def get_works():\n    \"\"\"\n    Endpoint to retrieve publications from the University of Johannesburg with pagination.\n    A query parameter 'page' can be provided by the frontend to load different pages.\n    \"\"\"\n    # Get the page number from the query parameters; default to 1 if not provided.\n    page = request.args.get(\"page\", default=1, type=int)\n    per_page = request.args.get(\"per_page\", default=10, type=int)\n    url = \"https://api.openalex.org/works\"\n    params = {",
+        "peekOfCode": "def get_works():\n    \"\"\"\n    Endpoint to retrieve publications from the University of Johannesburg with pagination.\n    A query parameter 'page' can be provided by the frontend to load different pages.\n    \"\"\"\n    start_time = time.time()\n    # Get the page number from the query parameters; default to 1 if not provided.\n    page = request.args.get(\"page\", default=1, type=int)\n    per_page = request.args.get(\"per_page\", default=10, type=int)\n    logger.info(f\"Request to get_works endpoint - page: {page}, per_page: {per_page}\")",
         "detail": "api.index",
         "documentation": {}
     },
@@ -22136,7 +22154,7 @@
         "kind": 2,
         "importPath": "api.index",
         "description": "api.index",
-        "peekOfCode": "def get_authors():\n    \"\"\"\n    Retrieves authors from OpenAlex whose last known institution is the University of Johannesburg.\n    The institution is identified by its OpenAlex ID: https://openalex.org/I24027795.\n    \"\"\"\n    page = request.args.get(\"page\", default=1, type=int)\n    per_page = request.args.get(\"per_page\", default=1, type=int)\n    url = \"https://api.openalex.org/authors\"\n    params = {\n        \"filter\": \"last_known_institutions.id:https://openalex.org/I24027795\",",
+        "peekOfCode": "def get_authors():\n    \"\"\"\n    Retrieves authors from OpenAlex whose last known institution is the University of Johannesburg.\n    The institution is identified by its OpenAlex ID: https://openalex.org/I24027795.\n    \"\"\"\n    start_time = time.time()\n    page = request.args.get(\"page\", default=1, type=int)\n    per_page = request.args.get(\"per_page\", default=1, type=int)\n    logger.info(f\"Request to get_authors endpoint - page: {page}, per_page: {per_page}\")\n    url = \"https://api.openalex.org/authors\"",
         "detail": "api.index",
         "documentation": {}
     },
@@ -22145,7 +22163,7 @@
         "kind": 2,
         "importPath": "api.index",
         "description": "api.index",
-        "peekOfCode": "def test():\n    return jsonify({\"message\": \"Test successful\"})\n@app.route(\"/autocomplete_author\", methods=[\"GET\"])\ndef autocomplete_author():\n    \"\"\"\n    Returns autocomplete suggestions for authors based on partial input.\n    Example usage: /autocomplete_author?author=John\n    \"\"\"\n    partial_name = request.args.get(\"author\")\n    if not partial_name:",
+        "peekOfCode": "def test():\n    logger.info(\"Request to test endpoint\")\n    return jsonify({\"message\": \"Test successful\"})\n@app.route(\"/autocomplete_author\", methods=[\"GET\"])\ndef autocomplete_author():\n    \"\"\"\n    Returns autocomplete suggestions for authors based on partial input.\n    Example usage: /autocomplete_author?author=John\n    \"\"\"\n    start_time = time.time()",
         "detail": "api.index",
         "documentation": {}
     },
@@ -22154,7 +22172,7 @@
         "kind": 2,
         "importPath": "api.index",
         "description": "api.index",
-        "peekOfCode": "def autocomplete_author():\n    \"\"\"\n    Returns autocomplete suggestions for authors based on partial input.\n    Example usage: /autocomplete_author?author=John\n    \"\"\"\n    partial_name = request.args.get(\"author\")\n    if not partial_name:\n        return (\n            jsonify(\n                {",
+        "peekOfCode": "def autocomplete_author():\n    \"\"\"\n    Returns autocomplete suggestions for authors based on partial input.\n    Example usage: /autocomplete_author?author=John\n    \"\"\"\n    start_time = time.time()\n    partial_name = request.args.get(\"author\")\n    logger.info(f\"Request to autocomplete_author endpoint - query: {partial_name}\")\n    if not partial_name:\n        logger.warning(\"autocomplete_author called without author parameter\")",
         "detail": "api.index",
         "documentation": {}
     },
@@ -22163,7 +22181,7 @@
         "kind": 2,
         "importPath": "api.index",
         "description": "api.index",
-        "peekOfCode": "def works_by_author():\n    \"\"\"\n    Fetches works associated with an author using the selected author ID.\n    Example usage: /works_by_author?author_id=AUTH_ID\n    \"\"\"\n    author_id = request.args.get(\"author_id\")\n    if not author_id:\n        return (\n            jsonify(\n                {",
+        "peekOfCode": "def works_by_author():\n    \"\"\"\n    Fetches works associated with an author using the selected author ID.\n    Example usage: /works_by_author?author_id=AUTH_ID\n    \"\"\"\n    start_time = time.time()\n    author_id = request.args.get(\"author_id\")\n    logger.info(f\"Request to works_by_author endpoint - author_id: {author_id}\")\n    if not author_id:\n        logger.warning(\"works_by_author called without author_id parameter\")",
         "detail": "api.index",
         "documentation": {}
     },
@@ -22172,7 +22190,7 @@
         "kind": 2,
         "importPath": "api.index",
         "description": "api.index",
-        "peekOfCode": "def autocomplete_work():\n    \"\"\"\n    Uses the OpenAlex autocomplete endpoint for works to return suggestions\n    based on a partial title provided via the 'title' query parameter.\n    \"\"\"\n    title_query = request.args.get(\"title\")\n    if not title_query:\n        return (\n            jsonify(\n                {",
+        "peekOfCode": "def autocomplete_work():\n    \"\"\"\n    Uses the OpenAlex autocomplete endpoint for works to return suggestions\n    based on a partial title provided via the 'title' query parameter.\n    \"\"\"\n    start_time = time.time()\n    title_query = request.args.get(\"title\")\n    logger.info(f\"Request to autocomplete_work endpoint - query: {title_query}\")\n    if not title_query:\n        logger.warning(\"autocomplete_work called without title parameter\")",
         "detail": "api.index",
         "documentation": {}
     },
@@ -22181,7 +22199,7 @@
         "kind": 2,
         "importPath": "api.index",
         "description": "api.index",
-        "peekOfCode": "def get_work():\n    \"\"\"\n    Fetches detailed information for a work from OpenAlex using the work ID\n    provided via the 'work_id' query parameter.\n    Returns the data in the same format as get_publications.\n    \"\"\"\n    work_id = request.args.get(\"work_id\")\n    if not work_id:\n        return (\n            jsonify(",
+        "peekOfCode": "def get_work():\n    \"\"\"\n    Fetches detailed information for a work from OpenAlex using the work ID\n    provided via the 'work_id' query parameter.\n    Returns the data in the same format as get_publications.\n    \"\"\"\n    start_time = time.time()\n    work_id = request.args.get(\"work_id\")\n    logger.info(f\"Request to get_work endpoint - work_id: {work_id}\")\n    if not work_id:",
         "detail": "api.index",
         "documentation": {}
     },
@@ -22190,7 +22208,25 @@
         "kind": 2,
         "importPath": "api.index",
         "description": "api.index",
-        "peekOfCode": "def search_by_title():\n    \"\"\"\n    Searches works from OpenAlex by title.\n    Expects query parameters:\n      - title: The title (or part of it) to search for.\n      - page: (optional) Page number for pagination (default is 1).\n      - per_page: (optional) Number of results per page (default is 10).\n    \"\"\"\n    title = request.args.get(\"title\", \"\", type=str)\n    page = request.args.get(\"page\", default=1, type=int)",
+        "peekOfCode": "def search_by_title():\n    \"\"\"\n    Searches works from OpenAlex by title.\n    Expects query parameters:\n      - title: The title (or part of it) to search for.\n      - page: (optional) Page number for pagination (default is 1).\n      - per_page: (optional) Number of results per page (default is 10).\n    \"\"\"\n    start_time = time.time()\n    title = request.args.get(\"title\", \"\", type=str)",
+        "detail": "api.index",
+        "documentation": {}
+    },
+    {
+        "label": "get_author",
+        "kind": 2,
+        "importPath": "api.index",
+        "description": "api.index",
+        "peekOfCode": "def get_author():\n    \"\"\"\n    Fetches detailed information for an author from OpenAlex using the author ID\n    provided via the 'author_id' query parameter.\n    \"\"\"\n    start_time = time.time()\n    author_id = request.args.get(\"author_id\")\n    logger.info(f\"Request to get_author endpoint - author_id: {author_id}\")\n    if not author_id:\n        logger.warning(\"get_author called without author_id parameter\")",
+        "detail": "api.index",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "api.index",
+        "description": "api.index",
+        "peekOfCode": "logger = logging.getLogger('oross_api')\napp = Flask(__name__)\n# CORS(app, resources={r\"/*\": {\"origins\": \"*\"}})\nCORS(app)\nUSER_AGENT = \"MyScript (your-email@example.com)\"\n@app.route(\"/\")\ndef index():\n    logger.info(\"Request to index endpoint\")\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])",
         "detail": "api.index",
         "documentation": {}
     },
@@ -22199,7 +22235,7 @@
         "kind": 5,
         "importPath": "api.index",
         "description": "api.index",
-        "peekOfCode": "app = Flask(__name__)\n# CORS(app, resources={r\"/*\": {\"origins\": \"*\"}})\nCORS(app)\nUSER_AGENT = \"MyScript (your-email@example.com)\"\n@app.route(\"/\")\ndef index():\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])\ndef get_works():\n    \"\"\"",
+        "peekOfCode": "app = Flask(__name__)\n# CORS(app, resources={r\"/*\": {\"origins\": \"*\"}})\nCORS(app)\nUSER_AGENT = \"MyScript (your-email@example.com)\"\n@app.route(\"/\")\ndef index():\n    logger.info(\"Request to index endpoint\")\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])\ndef get_works():",
         "detail": "api.index",
         "documentation": {}
     },
@@ -22208,7 +22244,7 @@
         "kind": 5,
         "importPath": "api.index",
         "description": "api.index",
-        "peekOfCode": "USER_AGENT = \"MyScript (your-email@example.com)\"\n@app.route(\"/\")\ndef index():\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])\ndef get_works():\n    \"\"\"\n    Endpoint to retrieve publications from the University of Johannesburg with pagination.\n    A query parameter 'page' can be provided by the frontend to load different pages.\n    \"\"\"",
+        "peekOfCode": "USER_AGENT = \"MyScript (your-email@example.com)\"\n@app.route(\"/\")\ndef index():\n    logger.info(\"Request to index endpoint\")\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])\ndef get_works():\n    \"\"\"\n    Endpoint to retrieve publications from the University of Johannesburg with pagination.\n    A query parameter 'page' can be provided by the frontend to load different pages.",
         "detail": "api.index",
         "documentation": {}
     }

@@ -2,6 +2,16 @@ from flask import Flask, jsonify, request
 import requests
 from flask_cors import CORS, cross_origin
 from api.helpers import parse_affiliation, reconstruct_abstract, format_publication
+import logging
+import time
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
+logger = logging.getLogger('oross_api')
 
 app = Flask(__name__)
 # CORS(app, resources={r"/*": {"origins": "*"}})
@@ -12,6 +22,7 @@ USER_AGENT = "MyScript (your-email@example.com)"
 
 @app.route("/")
 def index():
+    logger.info("Request to index endpoint")
     return "Hello form OROSS"
 
 
@@ -21,9 +32,12 @@ def get_works():
     Endpoint to retrieve publications from the University of Johannesburg with pagination.
     A query parameter 'page' can be provided by the frontend to load different pages.
     """
+    start_time = time.time()
     # Get the page number from the query parameters; default to 1 if not provided.
     page = request.args.get("page", default=1, type=int)
     per_page = request.args.get("per_page", default=10, type=int)
+    
+    logger.info(f"Request to get_works endpoint - page: {page}, per_page: {per_page}")
 
     url = "https://api.openalex.org/works"
     params = {
@@ -34,7 +48,7 @@ def get_works():
     }
 
     response = requests.get(url, params=params)
-
+    
     if response.status_code == 200:
         data = response.json()
         meta = {
@@ -51,8 +65,11 @@ def get_works():
             formatted_result = format_publication(result)
             results.append(formatted_result)
 
+        elapsed_time = time.time() - start_time
+        logger.info(f"get_works completed successfully - returned {len(results)} results in {elapsed_time:.2f}s")
         return jsonify({"meta": meta, "results": results})
     else:
+        logger.error(f"Error in get_works: {response.status_code} - {response.text}")
         return jsonify({"error": f"Error: {response.status_code}"})
 
 
@@ -63,9 +80,11 @@ def get_authors():
     Retrieves authors from OpenAlex whose last known institution is the University of Johannesburg.
     The institution is identified by its OpenAlex ID: https://openalex.org/I24027795.
     """
-
+    start_time = time.time()
     page = request.args.get("page", default=1, type=int)
     per_page = request.args.get("per_page", default=1, type=int)
+
+    logger.info(f"Request to get_authors endpoint - page: {page}, per_page: {per_page}")
 
     url = "https://api.openalex.org/authors"
     params = {
@@ -92,8 +111,11 @@ def get_authors():
                     ),
                 }
             )
+        elapsed_time = time.time() - start_time
+        logger.info(f"get_authors completed successfully - returned {len(authors_list)} authors in {elapsed_time:.2f}s")
         return jsonify(authors_list)
     else:
+        logger.error(f"Error in get_authors: {response.status_code} - {response.text}")
         print("Error:", response.status_code, response.text)
         return []
 
@@ -104,6 +126,7 @@ def get_authors():
 @app.route("/test", methods=["GET"])
 @cross_origin()
 def test():
+    logger.info("Request to test endpoint")
     return jsonify({"message": "Test successful"})
 
 
@@ -113,8 +136,13 @@ def autocomplete_author():
     Returns autocomplete suggestions for authors based on partial input.
     Example usage: /autocomplete_author?author=John
     """
+    start_time = time.time()
     partial_name = request.args.get("author")
+    
+    logger.info(f"Request to autocomplete_author endpoint - query: {partial_name}")
+    
     if not partial_name:
+        logger.warning("autocomplete_author called without author parameter")
         return (
             jsonify(
                 {
@@ -132,6 +160,7 @@ def autocomplete_author():
     headers = {"User-Agent": USER_AGENT}
     response = requests.get(search_url, params=search_params, headers=headers)
     if response.status_code != 200:
+        logger.error(f"Error in autocomplete_author: {response.status_code} - {response.text}")
         return (
             jsonify(
                 {
@@ -143,6 +172,8 @@ def autocomplete_author():
             response.status_code,
         )
 
+    elapsed_time = time.time() - start_time
+    logger.info(f"autocomplete_author completed successfully in {elapsed_time:.2f}s")
     return jsonify(response.json())
 
 
@@ -153,8 +184,13 @@ def works_by_author():
     Fetches works associated with an author using the selected author ID.
     Example usage: /works_by_author?author_id=AUTH_ID
     """
+    start_time = time.time()
     author_id = request.args.get("author_id")
+    
+    logger.info(f"Request to works_by_author endpoint - author_id: {author_id}")
+    
     if not author_id:
+        logger.warning("works_by_author called without author_id parameter")
         return (
             jsonify(
                 {
@@ -174,6 +210,7 @@ def works_by_author():
     headers = {"User-Agent": USER_AGENT}
     works_response = requests.get(works_url, params=works_params, headers=headers)
     if works_response.status_code != 200:
+        logger.error(f"Error in works_by_author: {works_response.status_code} - {works_response.text}")
         return (
             jsonify(
                 {
@@ -199,6 +236,8 @@ def works_by_author():
             }
         )
 
+    elapsed_time = time.time() - start_time
+    logger.info(f"works_by_author completed successfully - returned {len(works_list)} works in {elapsed_time:.2f}s")
     return jsonify({"author_id": author_id, "works": works_list})
 
 
@@ -211,8 +250,13 @@ def autocomplete_work():
     Uses the OpenAlex autocomplete endpoint for works to return suggestions
     based on a partial title provided via the 'title' query parameter.
     """
+    start_time = time.time()
     title_query = request.args.get("title")
+    
+    logger.info(f"Request to autocomplete_work endpoint - query: {title_query}")
+    
     if not title_query:
+        logger.warning("autocomplete_work called without title parameter")
         return (
             jsonify(
                 {
@@ -230,6 +274,7 @@ def autocomplete_work():
     headers = {"User-Agent": USER_AGENT}
     response = requests.get(search_url, params=search_params, headers=headers)
     if response.status_code != 200:
+        logger.error(f"Error in autocomplete_work: {response.status_code} - {response.text}")
         return (
             jsonify(
                 {
@@ -241,6 +286,8 @@ def autocomplete_work():
             response.status_code,
         )
 
+    elapsed_time = time.time() - start_time
+    logger.info(f"autocomplete_work completed successfully in {elapsed_time:.2f}s")
     return jsonify(response.json())
 
 
@@ -251,8 +298,13 @@ def get_work():
     provided via the 'work_id' query parameter.
     Returns the data in the same format as get_publications.
     """
+    start_time = time.time()
     work_id = request.args.get("work_id")
+    
+    logger.info(f"Request to get_work endpoint - work_id: {work_id}")
+    
     if not work_id:
+        logger.warning("get_work called without work_id parameter")
         return (
             jsonify(
                 {
@@ -267,6 +319,7 @@ def get_work():
     headers = {"User-Agent": USER_AGENT}
     response = requests.get(work_url, headers=headers)
     if response.status_code != 200:
+        logger.error(f"Error in get_work: {response.status_code} - {response.text}")
         return (
             jsonify(
                 {
@@ -282,6 +335,8 @@ def get_work():
     result = response.json()
     formatted_result = format_publication(result)
 
+    elapsed_time = time.time() - start_time
+    logger.info(f"get_work completed successfully in {elapsed_time:.2f}s")
     # Return a single item with the same structure as get_publications
     # since we only have one work there is no need to paginate or return the results as an array
     return jsonify(formatted_result)
@@ -296,9 +351,12 @@ def search_by_title():
       - page: (optional) Page number for pagination (default is 1).
       - per_page: (optional) Number of results per page (default is 10).
     """
+    start_time = time.time()
     title = request.args.get("title", "", type=str)
     page = request.args.get("page", default=1, type=int)
     per_page = request.args.get("per_page", default=10, type=int)
+    
+    logger.info(f"Request to search_by_title endpoint - title: {title}, page: {page}, per_page: {per_page}")
 
     url = "https://api.openalex.org/works"
     params = {"search": title, "page": page, "per_page": per_page}
@@ -317,10 +375,61 @@ def search_by_title():
                     "publication_year": work.get("publication_year"),
                 }
             )
+        elapsed_time = time.time() - start_time
+        logger.info(f"search_by_title completed successfully - returned {len(works_list)} results in {elapsed_time:.2f}s")
         return jsonify(works_list)
     else:
+        logger.error(f"Error in search_by_title: {response.status_code} - {response.text}")
         print("Error:", response.status_code, response.text)
         return jsonify([]), response.status_code
+
+
+@app.route("/author", methods=["GET"])
+def get_author():
+    """
+    Fetches detailed information for an author from OpenAlex using the author ID
+    provided via the 'author_id' query parameter.
+    """
+    start_time = time.time()
+    author_id = request.args.get("author_id")
+    
+    logger.info(f"Request to get_author endpoint - author_id: {author_id}")
+    
+    if not author_id:
+        logger.warning("get_author called without author_id parameter")
+        return (
+            jsonify(
+                {
+                    "error": "Please provide an author id using the 'author_id' query parameter."
+                }
+            ),
+            400,
+        )
+
+    # Build the URL for retrieving author details
+    author_url = f"https://api.openalex.org/authors/{author_id}"
+    headers = {"User-Agent": USER_AGENT}
+    response = requests.get(author_url, headers=headers)
+    
+    if response.status_code != 200:
+        logger.error(f"Error in get_author: {response.status_code} - {response.text}")
+        return (
+            jsonify(
+                {
+                    "error": "Error fetching author details.",
+                    "status_code": response.status_code,
+                    "message": response.text,
+                }
+            ),
+            response.status_code,
+        )
+
+    # Process the author data
+    author_data = response.json()
+    
+    elapsed_time = time.time() - start_time
+    logger.info(f"get_author completed successfully in {elapsed_time:.2f}s")
+    return jsonify(author_data)
 
 
 if __name__ == "__main__":

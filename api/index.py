@@ -178,11 +178,11 @@ def autocomplete_author():
 
 
 ####SECOND PART
-@app.route("/works_by_author", methods=["GET"])
+@app.route("/author/works", methods=["GET"])
 def works_by_author():
     """
     Fetches works associated with an author using the selected author ID.
-    Example usage: /works_by_author?author_id=AUTH_ID
+    Example usage: /author/works?author_id=AUTH_ID
     """
     start_time = time.time()
     author_id = request.args.get("author_id")

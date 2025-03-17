@@ -6026,7 +6026,7 @@
         "kind": 2,
         "importPath": ".vercel.cache.index.api.index",
         "description": ".vercel.cache.index.api.index",
-        "peekOfCode": "def works_by_author():\n    \"\"\"\n    Fetches works associated with an author using the selected author ID.\n    Example usage: /works_by_author?author_id=AUTH_ID\n    \"\"\"\n    start_time = time.time()\n    author_id = request.args.get(\"author_id\")\n    logger.info(f\"Request to works_by_author endpoint - author_id: {author_id}\")\n    if not author_id:\n        logger.warning(\"works_by_author called without author_id parameter\")",
+        "peekOfCode": "def works_by_author():\n    \"\"\"\n    Fetches works associated with an author using the selected author ID.\n    Example usage: /author/works?author_id=AUTH_ID\n    \"\"\"\n    start_time = time.time()\n    author_id = request.args.get(\"author_id\")\n    logger.info(f\"Request to works_by_author endpoint - author_id: {author_id}\")\n    if not author_id:\n        logger.warning(\"works_by_author called without author_id parameter\")",
         "detail": ".vercel.cache.index.api.index",
         "documentation": {}
     },
@@ -22181,7 +22181,7 @@
         "kind": 2,
         "importPath": "api.index",
         "description": "api.index",
-        "peekOfCode": "def works_by_author():\n    \"\"\"\n    Fetches works associated with an author using the selected author ID.\n    Example usage: /works_by_author?author_id=AUTH_ID\n    \"\"\"\n    start_time = time.time()\n    author_id = request.args.get(\"author_id\")\n    logger.info(f\"Request to works_by_author endpoint - author_id: {author_id}\")\n    if not author_id:\n        logger.warning(\"works_by_author called without author_id parameter\")",
+        "peekOfCode": "def works_by_author():\n    \"\"\"\n    Fetches works associated with an author using the selected author ID.\n    Example usage: /author/works?author_id=AUTH_ID\n    \"\"\"\n    start_time = time.time()\n    author_id = request.args.get(\"author_id\")\n    logger.info(f\"Request to works_by_author endpoint - author_id: {author_id}\")\n    if not author_id:\n        logger.warning(\"works_by_author called without author_id parameter\")",
         "detail": "api.index",
         "documentation": {}
     },

@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request
 import requests
 from flask_cors import CORS, cross_origin
-from helpers import parse_affiliation, reconstruct_abstract, format_publication
+from api.helpers import parse_affiliation, reconstruct_abstract, format_publication
 import logging
 import time
 
@@ -14,8 +14,8 @@ logging.basicConfig(
 logger = logging.getLogger('oross_api')
 
 app = Flask(__name__)
-# CORS(app, resources={r"/*": {"origins": "*"}})
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
+# CORS(app)
 
 USER_AGENT = "MyScript (your-email@example.com)"
 

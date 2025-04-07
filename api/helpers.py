@@ -2,6 +2,64 @@
 Helper functions for the OROSS API.
 This module contains utility functions for processing and formatting data from the OpenAlex API.
 """
+from bs4 import BeautifulSoup
+
+import re
+
+def convert_mathml_to_plain(text):
+    # Wrap the text in a root element if it is not already a complete XML document
+    wrapped_text = f"<root>{text}</root>"
+    soup = BeautifulSoup(wrapped_text, "lxml-xml")
+    
+    # Extract text from the parsed XML
+    plain_text = soup.get_text(separator=" ", strip=True)
+    
+    # Optional: Additional cleanup if necessary (e.g., removing extra spaces)
+    plain_text = " ".join(plain_text.split())
+    
+    return plain_text
+
+def replace_mathml(match):
+    """Helper function to convert a MathML segment to plain text."""
+    mathml = match.group(0)
+    try:
+        # Parse the MathML snippet using the lxml XML parser
+        soup = BeautifulSoup(mathml, "lxml-xml")
+        # Extract text from the MathML tags
+        return soup.get_text(separator=" ", strip=True)
+    except Exception as e:
+        print("Error parsing MathML:", e)
+        # Fallback: return the original mathml if parsing fails
+        return mathml
+
+def convert_mathml_and_latex_to_plain(text):
+    """
+    Converts a string containing MathML and LaTeX into a plain text format.
+    It:
+      - Finds MathML segments and replaces them with plain text.
+      - Removes LaTeX math delimiters ($$ or $).
+      - Replaces specific LaTeX commands with plain text equivalents.
+    """
+    # Replace all MathML segments with plain text using the helper function
+    text = re.sub(r"<mml:math[\s\S]*?</mml:math>", replace_mathml, text)
+
+    # Remove LaTeX math delimiters
+    text = text.replace('$$', '').replace('$', '')
+
+    # Replace specific LaTeX commands
+    text = text.replace(r'\sqrt{s}', '√s')
+
+    # Replace \text{...} with the inner content
+    text = re.sub(r'\\text\s*\{([^}]*)\}', r'\1', text)
+
+    # Remove any \hspace commands (and their arguments)
+    text = re.sub(r'\\hspace\{[^}]*\}', '', text)
+
+    # Clean up extra whitespace
+    text = re.sub(r'\s+', ' ', text)
+
+    return text.strip()
+
 
 def parse_affiliation(raw_str):
     """
@@ -137,10 +195,18 @@ def format_publication(result):
 
     # Reconstruct abstract from inverted index.
     abstract = reconstruct_abstract(result.get("abstract_inverted_index"))
+    converted_abstract = convert_mathml_to_plain(abstract)
+
+    # Format XML title.
+    title = result.get("title")
+    converted_title = convert_mathml_to_plain(title)
+  
+
     
     return {
         "id": result.get("id"),
-        "title": result.get("title"),
+        # "title": result.get("title"),
+        "title": converted_title,
         "publication_year": result.get("publication_year"),
         "doi": result.get("doi"),
         "authors": authors,
@@ -161,5 +227,6 @@ def format_publication(result):
         "sustainable_development_goals": result.get("sustainable_development_goals", []),
         "grant_funder_name": grant_funder_name,
         "grant_award_id": grant_award_id,
-        "abstract": abstract
+        "abstract": converted_abstract
     } 
+

@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request
 import requests
 from flask_cors import CORS, cross_origin
-from api.helpers import parse_affiliation, reconstruct_abstract, format_publication
+from helpers import parse_affiliation, reconstruct_abstract, format_publication
 import logging
 import time
 

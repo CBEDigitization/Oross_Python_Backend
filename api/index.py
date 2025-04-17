@@ -4,6 +4,8 @@ from flask_cors import CORS, cross_origin
 from api.helpers import parse_affiliation, reconstruct_abstract, format_publication
 import logging
 import time
+from flask_caching import Cache
+import functools
 
 # Configure logging
 logging.basicConfig(
@@ -17,6 +19,61 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 # CORS(app)
 
+# Configure caching
+cache = Cache(app, config={
+    'CACHE_TYPE': 'SimpleCache',
+    'CACHE_DEFAULT_TIMEOUT': 3600  # Cache timeout in seconds (1 hour)
+})
+
+# Add global counters for cache statistics
+cache_stats = {
+    'hits': 0,
+    'misses': 0,
+    'total_requests': 0
+}
+
+# Create a decorator that will log cache hits/misses and also cache the response
+def cached_with_logging(timeout=3600, query_string=True):
+    def decorator(f):
+        @functools.wraps(f)
+        def decorated_function(*args, **kwargs):
+            # Update total requests counter
+            cache_stats['total_requests'] += 1
+            
+            # Generate a cache key similar to what Flask-Caching would use
+            cache_key = request.path
+            if query_string:
+                cache_key = cache_key + '?' + request.query_string.decode('utf-8')
+            
+            # Check if the key exists in cache
+            cached_response = cache.get(cache_key)
+            if cached_response is None:
+                # Update miss counter
+                cache_stats['misses'] += 1
+                
+                # If not in cache, call the function and cache the result
+                start_time = time.time()
+                response = f(*args, **kwargs)
+                execution_time = time.time() - start_time
+                
+                # Log cache miss with execution time
+                logger.info(f"CACHE MISS: {f.__name__} - {request.path} - {dict(request.args)} - Execution time: {execution_time:.2f}s")
+                
+                # Cache the result
+                cache.set(cache_key, response, timeout=timeout)
+                return response
+            else:
+                # Update hit counter
+                cache_stats['hits'] += 1
+                
+                # Log cache hit with response type and approximate size
+                response_type = type(cached_response).__name__
+                response_size = len(str(cached_response)) if hasattr(cached_response, '__len__') else 'unknown'
+                logger.info(f"CACHE HIT: {f.__name__} - {request.path} - {dict(request.args)} - Type: {response_type} - Size: {response_size} bytes")
+                return cached_response
+        return decorated_function
+    return decorator
+
 USER_AGENT = "MyScript (your-email@example.com)"
 
 
@@ -27,6 +84,7 @@ def index():
 
 
 @app.route("/works", methods=["GET"])
+@cached_with_logging(timeout=3600, query_string=True)  # Cache for 1 hour, vary by query string
 def get_works():
     """
     Endpoint to retrieve publications from the University of Johannesburg with pagination.
@@ -75,6 +133,7 @@ def get_works():
 
 # Route to get the names of the others
 @app.route("/authors", methods=["GET"])
+@cached_with_logging(timeout=3600, query_string=True)  # Cache for 1 hour, vary by query string
 def get_authors():
     """
     Retrieves authors from OpenAlex whose last known institution is the University of Johannesburg.
@@ -131,6 +190,7 @@ def test():
 
 
 @app.route("/autocomplete_author", methods=["GET"])
+@cached_with_logging(timeout=1800, query_string=True)  # Cache for 30 minutes, vary by query string
 def autocomplete_author():
     """
     Returns autocomplete suggestions for authors based on partial input.
@@ -179,15 +239,18 @@ def autocomplete_author():
 
 ####SECOND PART
 @app.route("/author/works", methods=["GET"])
+@cached_with_logging(timeout=3600, query_string=True)  # Cache for 1 hour, vary by query string
 def works_by_author():
     """
     Fetches works associated with an author using the selected author ID.
-    Example usage: /author/works?author_id=AUTH_ID
+    Example usage: /author/works?author_id=AUTH_ID&page=1&per_page=10
     """
     start_time = time.time()
     author_id = request.args.get("author_id")
+    page = request.args.get("page", default=1, type=int)
+    per_page = request.args.get("per_page", default=10, type=int)
     
-    logger.info(f"Request to works_by_author endpoint - author_id: {author_id}")
+    logger.info(f"Request to works_by_author endpoint - author_id: {author_id}, page: {page}, per_page: {per_page}")
     
     if not author_id:
         logger.warning("works_by_author called without author_id parameter")
@@ -204,7 +267,8 @@ def works_by_author():
     works_params = {
         "filter": f"authorships.author.id:{author_id}",
         "sort": "publication_year:desc",  # Most recent works first.
-        "per_page": 10,  # Adjust per_page as needed.
+        "per_page": per_page,
+        "page": page
     }
     USER_AGENT = "MyScript (your-email@example.com)"
     headers = {"User-Agent": USER_AGENT}
@@ -223,6 +287,17 @@ def works_by_author():
         )
 
     works_data = works_response.json()
+    
+    # Extract metadata for pagination
+    meta = {
+        "count": works_data.get("meta", {}).get("count"),
+        "db_response_time_ms": works_data.get("meta", {}).get("db_response_time_ms"),
+        "page": works_data.get("meta", {}).get("page"),
+        "per_page": works_data.get("meta", {}).get("per_page"),
+        "total_pages": works_data.get("meta", {}).get("count", 0) // per_page
+        + (1 if works_data.get("meta", {}).get("count", 0) % per_page > 0 else 0),
+    }
+    
     works_list = []
     for work in works_data.get("results", []):
         works_list.append(
@@ -238,13 +313,14 @@ def works_by_author():
 
     elapsed_time = time.time() - start_time
     logger.info(f"works_by_author completed successfully - returned {len(works_list)} works in {elapsed_time:.2f}s")
-    return jsonify({"author_id": author_id, "works": works_list})
+    return jsonify({"meta": meta, "author_id": author_id, "results": works_list})
 
 
 ########TITLE SEARCH######
 
 
 @app.route("/autocomplete_work", methods=["GET"])
+@cached_with_logging(timeout=1800, query_string=True)  # Cache for 30 minutes, vary by query string
 def autocomplete_work():
     """
     Uses the OpenAlex autocomplete endpoint for works to return suggestions
@@ -292,6 +368,7 @@ def autocomplete_work():
 
 
 @app.route("/work", methods=["GET"])
+@cached_with_logging(timeout=3600, query_string=True)  # Cache for 1 hour, vary by query string
 def get_work():
     """
     Fetches detailed information for a work from OpenAlex using the work ID
@@ -343,6 +420,7 @@ def get_work():
 
 
 @app.route("/search_by_title", methods=["GET"])
+@cached_with_logging(timeout=3600, query_string=True)  # Cache for 1 hour, vary by query string
 def search_by_title():
     """
     Searches works from OpenAlex by title.
@@ -385,6 +463,7 @@ def search_by_title():
 
 
 @app.route("/author", methods=["GET"])
+@cached_with_logging(timeout=3600, query_string=True)  # Cache for 1 hour, vary by query string
 def get_author():
     """
     Fetches detailed information for an author from OpenAlex using the author ID
@@ -430,6 +509,44 @@ def get_author():
     elapsed_time = time.time() - start_time
     logger.info(f"get_author completed successfully in {elapsed_time:.2f}s")
     return jsonify(author_data)
+
+
+@app.route("/cache_stats", methods=["GET"])
+def get_cache_stats():
+    """
+    Returns statistics about the cache performance.
+    """
+    hit_rate = 0
+    if cache_stats['total_requests'] > 0:
+        hit_rate = (cache_stats['hits'] / cache_stats['total_requests']) * 100
+    
+    stats = {
+        'hits': cache_stats['hits'],
+        'misses': cache_stats['misses'],
+        'total_requests': cache_stats['total_requests'],
+        'hit_rate': f"{hit_rate:.2f}%"
+    }
+    
+    logger.info(f"Cache statistics requested: {stats}")
+    return jsonify(stats)
+
+
+@app.route("/clear_cache", methods=["POST"])
+def clear_cache():
+    """
+    Clears the entire cache and resets statistics.
+    This endpoint should be protected in production.
+    """
+    # Clear the cache
+    cache.clear()
+    
+    # Reset statistics
+    cache_stats['hits'] = 0
+    cache_stats['misses'] = 0
+    cache_stats['total_requests'] = 0
+    
+    logger.info("Cache cleared and statistics reset")
+    return jsonify({"message": "Cache cleared successfully", "status": "success"})
 
 
 if __name__ == "__main__":

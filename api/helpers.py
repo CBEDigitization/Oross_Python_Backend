@@ -156,16 +156,18 @@ def format_publication(result):
         This function ensures consistent formatting across different endpoints
         that return publication data.
     """
-    if not result:
+    if not result or not isinstance(result, dict):
         return {}
         
     # Build a list of authors with enhanced affiliation details.
     authors = []
     for authorship in result.get("authorships", []):
+        if not isinstance(authorship, dict):
+            continue
         author = authorship.get("author", {})
         author_position = authorship.get("author_position")
         raw_affiliations = authorship.get("raw_affiliation_strings", [])
-        if raw_affiliations:
+        if raw_affiliations and isinstance(raw_affiliations, list):
             affiliation_data = parse_affiliation(raw_affiliations[0])
         else:
             affiliation_data = {}
@@ -177,21 +179,30 @@ def format_publication(result):
         })
     
     # Extract additional publication details.
+    primary_location = result.get("primary_location", {}) or {}
     publication_details = {
         "publication_date": result.get("publication_date"),
         "biblio": result.get("biblio"),
-        "landing_page_url": result.get("primary_location", {}).get("landing_page_url"),
-        "pdf_url": result.get("primary_location", {}).get("pdf_url")
+        "landing_page_url": primary_location.get("landing_page_url"),
+        "pdf_url": primary_location.get("pdf_url")
     }
 
     # Extract open access details.
-    is_open_access = result.get("open_access", {}).get("is_oa")
-    open_access_status = result.get("open_access", {}).get("oa_status")
-    open_access_url = result.get("open_access", {}).get("oa_url")
+    open_access = result.get("open_access", {}) or {}
+    is_open_access = open_access.get("is_oa")
+    open_access_status = open_access.get("oa_status")
+    open_access_url = open_access.get("oa_url")
 
+    # Extract grant information with null checks
     grants = result.get("grants", [])
-    grant_funder_name = grants[0].get("funder_display_name") if grants else None
-    grant_award_id = grants[0].get("award_id") if grants else None
+    grant_funder_name = grants[0].get("funder_display_name") if grants and isinstance(grants, list) and len(grants) > 0 and isinstance(grants[0], dict) else None
+    grant_award_id = grants[0].get("award_id") if grants and isinstance(grants, list) and len(grants) > 0 and isinstance(grants[0], dict) else None
+
+    # Extract topic information with null checks
+    primary_topic = result.get("primary_topic", {}) or {}
+    field = primary_topic.get("field", {}) or {}
+    subfield = primary_topic.get("subfield", {}) or {}
+    domain = primary_topic.get("domain", {}) or {}
 
     # Reconstruct abstract from inverted index.
     abstract = reconstruct_abstract(result.get("abstract_inverted_index"))
@@ -220,10 +231,10 @@ def format_publication(result):
         "open_access_url": open_access_url,
         "article_processing_charge_list": result.get("apc_list"),
         "article_processing_charge_paid": result.get("apc_paid"),
-        "topics": result.get("primary_topic", {}).get("display_name"),
-        "field": result.get("primary_topic", {}).get("field", {}).get("display_name"),
-        "subfield": result.get("primary_topic", {}).get("subfield", {}).get("display_name"),
-        "domain": result.get("primary_topic", {}).get("domain", {}).get("display_name"),
+        "topics": primary_topic.get("display_name"),
+        "field": field.get("display_name"),
+        "subfield": subfield.get("display_name"),
+        "domain": domain.get("display_name"),
         "sustainable_development_goals": result.get("sustainable_development_goals", []),
         "grant_funder_name": grant_funder_name,
         "grant_award_id": grant_award_id,

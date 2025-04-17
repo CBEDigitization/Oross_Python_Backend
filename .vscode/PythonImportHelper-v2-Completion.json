@@ -211,6 +211,38 @@
         "documentation": {}
     },
     {
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
         "label": "time",
         "importPath": "time",
         "description": "time",
@@ -248,6 +280,255 @@
         "description": "time",
         "isExtraImport": true,
         "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "Cache",
+        "importPath": "flask_caching",
+        "description": "flask_caching",
+        "isExtraImport": true,
+        "detail": "flask_caching",
+        "documentation": {}
+    },
+    {
+        "label": "make_template_fragment_key",
+        "importPath": "flask_caching",
+        "description": "flask_caching",
+        "isExtraImport": true,
+        "detail": "flask_caching",
+        "documentation": {}
+    },
+    {
+        "label": "Cache",
+        "importPath": "flask_caching",
+        "description": "flask_caching",
+        "isExtraImport": true,
+        "detail": "flask_caching",
+        "documentation": {}
+    },
+    {
+        "label": "functools",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "functools",
+        "description": "functools",
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "cached_property",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "lru_cache",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "lru_cache",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "lru_cache",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "update_wrapper",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "update_wrapper",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "update_wrapper",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "update_wrapper",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "update_wrapper",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "update_wrapper",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "update_wrapper",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "cache",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "update_wrapper",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "update_wrapper",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "WRAPPER_ASSIGNMENTS",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "wraps",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "update_wrapper",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "lru_cache",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "partial",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "reduce",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "update_wrapper",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "partial",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "update_wrapper",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "partial",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "update_wrapper",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "partial",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "update_wrapper",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
         "documentation": {}
     },
     {
@@ -1318,6 +1599,30 @@
         "documentation": {}
     },
     {
+        "label": "Callable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Any",
         "importPath": "typing",
         "description": "typing",
@@ -1714,30 +2019,6 @@
         "documentation": {}
     },
     {
-        "label": "ExitStack",
-        "importPath": "contextlib",
-        "description": "contextlib",
-        "isExtraImport": true,
-        "detail": "contextlib",
-        "documentation": {}
-    },
-    {
-        "label": "contextmanager",
-        "importPath": "contextlib",
-        "description": "contextlib",
-        "isExtraImport": true,
-        "detail": "contextlib",
-        "documentation": {}
-    },
-    {
-        "label": "contextmanager",
-        "importPath": "contextlib",
-        "description": "contextlib",
-        "isExtraImport": true,
-        "detail": "contextlib",
-        "documentation": {}
-    },
-    {
         "label": "contextmanager",
         "importPath": "contextlib",
         "description": "contextlib",
@@ -1778,237 +2059,44 @@
         "documentation": {}
     },
     {
-        "label": "functools",
+        "label": "ExitStack",
+        "importPath": "contextlib",
+        "description": "contextlib",
+        "isExtraImport": true,
+        "detail": "contextlib",
+        "documentation": {}
+    },
+    {
+        "label": "contextmanager",
+        "importPath": "contextlib",
+        "description": "contextlib",
+        "isExtraImport": true,
+        "detail": "contextlib",
+        "documentation": {}
+    },
+    {
+        "label": "contextmanager",
+        "importPath": "contextlib",
+        "description": "contextlib",
+        "isExtraImport": true,
+        "detail": "contextlib",
+        "documentation": {}
+    },
+    {
+        "label": "contextmanager",
+        "importPath": "contextlib",
+        "description": "contextlib",
+        "isExtraImport": true,
+        "detail": "contextlib",
+        "documentation": {}
+    },
+    {
+        "label": "errno",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "functools",
-        "description": "functools",
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "cached_property",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "lru_cache",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "lru_cache",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "lru_cache",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "update_wrapper",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "update_wrapper",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "update_wrapper",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "update_wrapper",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "update_wrapper",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "update_wrapper",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "update_wrapper",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "cache",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "update_wrapper",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "update_wrapper",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "WRAPPER_ASSIGNMENTS",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "wraps",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "update_wrapper",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "lru_cache",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "partial",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "reduce",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "update_wrapper",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "partial",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "update_wrapper",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "partial",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "update_wrapper",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "partial",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "update_wrapper",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "atexit",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "atexit",
-        "description": "atexit",
-        "detail": "atexit",
+        "importPath": "errno",
+        "description": "errno",
+        "detail": "errno",
         "documentation": {}
     },
     {
@@ -2042,6 +2130,255 @@
         "description": "os",
         "isExtraImport": true,
         "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "platform",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "platform",
+        "description": "platform",
+        "detail": "platform",
+        "documentation": {}
+    },
+    {
+        "label": "stat",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "stat",
+        "description": "stat",
+        "detail": "stat",
+        "documentation": {}
+    },
+    {
+        "label": "struct",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "struct",
+        "description": "struct",
+        "detail": "struct",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "TemporaryFile",
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "isExtraImport": true,
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "hashlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "md5",
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "isExtraImport": true,
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "sha256",
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "isExtraImport": true,
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "sha1",
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "isExtraImport": true,
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "sha1",
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "isExtraImport": true,
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "sha1",
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "isExtraImport": true,
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "pathlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "PurePath",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "BaseCache",
+        "importPath": "cachelib.base",
+        "description": "cachelib.base",
+        "isExtraImport": true,
+        "detail": "cachelib.base",
+        "documentation": {}
+    },
+    {
+        "label": "BaseCache",
+        "importPath": "cachelib.base",
+        "description": "cachelib.base",
+        "isExtraImport": true,
+        "detail": "cachelib.base",
+        "documentation": {}
+    },
+    {
+        "label": "BaseCache",
+        "importPath": "cachelib.base",
+        "description": "cachelib.base",
+        "isExtraImport": true,
+        "detail": "cachelib.base",
+        "documentation": {}
+    },
+    {
+        "label": "BaseCache",
+        "importPath": "cachelib.base",
+        "description": "cachelib.base",
+        "isExtraImport": true,
+        "detail": "cachelib.base",
+        "documentation": {}
+    },
+    {
+        "label": "BaseCache",
+        "importPath": "cachelib.base",
+        "description": "cachelib.base",
+        "isExtraImport": true,
+        "detail": "cachelib.base",
+        "documentation": {}
+    },
+    {
+        "label": "FileSystemSerializer",
+        "importPath": "cachelib.serializers",
+        "description": "cachelib.serializers",
+        "isExtraImport": true,
+        "detail": "cachelib.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "RedisSerializer",
+        "importPath": "cachelib.serializers",
+        "description": "cachelib.serializers",
+        "isExtraImport": true,
+        "detail": "cachelib.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleSerializer",
+        "importPath": "cachelib.serializers",
+        "description": "cachelib.serializers",
+        "isExtraImport": true,
+        "detail": "cachelib.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "UWSGISerializer",
+        "importPath": "cachelib.serializers",
+        "description": "cachelib.serializers",
+        "isExtraImport": true,
+        "detail": "cachelib.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "IGNORECASE",
+        "importPath": "re",
+        "description": "re",
+        "isExtraImport": true,
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "compile",
+        "importPath": "re",
+        "description": "re",
+        "isExtraImport": true,
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "sub",
+        "importPath": "re",
+        "description": "re",
+        "isExtraImport": true,
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "findall",
+        "importPath": "re",
+        "description": "re",
+        "isExtraImport": true,
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "pickle",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pickle",
+        "description": "pickle",
+        "detail": "pickle",
+        "documentation": {}
+    },
+    {
+        "label": "atexit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "atexit",
+        "description": "atexit",
+        "detail": "atexit",
         "documentation": {}
     },
     {
@@ -2151,47 +2488,6 @@
         "documentation": {}
     },
     {
-        "label": "re",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "re",
-        "description": "re",
-        "detail": "re",
-        "documentation": {}
-    },
-    {
-        "label": "IGNORECASE",
-        "importPath": "re",
-        "description": "re",
-        "isExtraImport": true,
-        "detail": "re",
-        "documentation": {}
-    },
-    {
-        "label": "compile",
-        "importPath": "re",
-        "description": "re",
-        "isExtraImport": true,
-        "detail": "re",
-        "documentation": {}
-    },
-    {
-        "label": "sub",
-        "importPath": "re",
-        "description": "re",
-        "isExtraImport": true,
-        "detail": "re",
-        "documentation": {}
-    },
-    {
-        "label": "findall",
-        "importPath": "re",
-        "description": "re",
-        "isExtraImport": true,
-        "detail": "re",
-        "documentation": {}
-    },
-    {
         "label": "warnings",
         "kind": 6,
         "isExtraImport": true,
@@ -2214,47 +2510,6 @@
         "description": "warnings",
         "isExtraImport": true,
         "detail": "warnings",
-        "documentation": {}
-    },
-    {
-        "label": "hashlib",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "hashlib",
-        "description": "hashlib",
-        "detail": "hashlib",
-        "documentation": {}
-    },
-    {
-        "label": "sha256",
-        "importPath": "hashlib",
-        "description": "hashlib",
-        "isExtraImport": true,
-        "detail": "hashlib",
-        "documentation": {}
-    },
-    {
-        "label": "sha1",
-        "importPath": "hashlib",
-        "description": "hashlib",
-        "isExtraImport": true,
-        "detail": "hashlib",
-        "documentation": {}
-    },
-    {
-        "label": "sha1",
-        "importPath": "hashlib",
-        "description": "hashlib",
-        "isExtraImport": true,
-        "detail": "hashlib",
-        "documentation": {}
-    },
-    {
-        "label": "sha1",
-        "importPath": "hashlib",
-        "description": "hashlib",
-        "isExtraImport": true,
-        "detail": "hashlib",
         "documentation": {}
     },
     {
@@ -2987,15 +3242,6 @@
         "documentation": {}
     },
     {
-        "label": "errno",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "errno",
-        "description": "errno",
-        "detail": "errno",
-        "documentation": {}
-    },
-    {
         "label": "itertools",
         "kind": 6,
         "isExtraImport": true,
@@ -3156,32 +3402,6 @@
         "importPath": "shlex",
         "description": "shlex",
         "detail": "shlex",
-        "documentation": {}
-    },
-    {
-        "label": "tempfile",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "tempfile",
-        "description": "tempfile",
-        "detail": "tempfile",
-        "documentation": {}
-    },
-    {
-        "label": "TemporaryFile",
-        "importPath": "tempfile",
-        "description": "tempfile",
-        "isExtraImport": true,
-        "detail": "tempfile",
-        "documentation": {}
-    },
-    {
-        "label": "stat",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "stat",
-        "description": "stat",
-        "detail": "stat",
         "documentation": {}
     },
     {
@@ -4145,23 +4365,6 @@
         "documentation": {}
     },
     {
-        "label": "pathlib",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "PurePath",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
         "label": "BaseLoader",
         "importPath": "jinja2",
         "description": "jinja2",
@@ -4203,6 +4406,14 @@
     },
     {
         "label": "TemplateNotFound",
+        "importPath": "jinja2",
+        "description": "jinja2",
+        "isExtraImport": true,
+        "detail": "jinja2",
+        "documentation": {}
+    },
+    {
+        "label": "nodes",
         "importPath": "jinja2",
         "description": "jinja2",
         "isExtraImport": true,
@@ -4702,15 +4913,6 @@
         "documentation": {}
     },
     {
-        "label": "platform",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "platform",
-        "description": "platform",
-        "detail": "platform",
-        "documentation": {}
-    },
-    {
         "label": "traceback",
         "kind": 6,
         "isExtraImport": true,
@@ -4900,12 +5102,123 @@
         "documentation": {}
     },
     {
-        "label": "bisect",
-        "kind": 6,
+        "label": "BaseCache",
+        "importPath": "cachelib",
+        "description": "cachelib",
         "isExtraImport": true,
-        "importPath": "bisect",
-        "description": "bisect",
-        "detail": "bisect",
+        "detail": "cachelib",
+        "documentation": {}
+    },
+    {
+        "label": "FileSystemCache",
+        "importPath": "cachelib",
+        "description": "cachelib",
+        "isExtraImport": true,
+        "detail": "cachelib",
+        "documentation": {}
+    },
+    {
+        "label": "MemcachedCache",
+        "importPath": "cachelib",
+        "description": "cachelib",
+        "isExtraImport": true,
+        "detail": "cachelib",
+        "documentation": {}
+    },
+    {
+        "label": "RedisCache",
+        "importPath": "cachelib",
+        "description": "cachelib",
+        "isExtraImport": true,
+        "detail": "cachelib",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleCache",
+        "importPath": "cachelib",
+        "description": "cachelib",
+        "isExtraImport": true,
+        "detail": "cachelib",
+        "documentation": {}
+    },
+    {
+        "label": "UWSGICache",
+        "importPath": "cachelib",
+        "description": "cachelib",
+        "isExtraImport": true,
+        "detail": "cachelib",
+        "documentation": {}
+    },
+    {
+        "label": "BaseCache",
+        "importPath": "flask_caching.backends.base",
+        "description": "flask_caching.backends.base",
+        "isExtraImport": true,
+        "detail": "flask_caching.backends.base",
+        "documentation": {}
+    },
+    {
+        "label": "BaseCache",
+        "importPath": "flask_caching.backends.base",
+        "description": "flask_caching.backends.base",
+        "isExtraImport": true,
+        "detail": "flask_caching.backends.base",
+        "documentation": {}
+    },
+    {
+        "label": "BaseCache",
+        "importPath": "flask_caching.backends.base",
+        "description": "flask_caching.backends.base",
+        "isExtraImport": true,
+        "detail": "flask_caching.backends.base",
+        "documentation": {}
+    },
+    {
+        "label": "BaseCache",
+        "importPath": "flask_caching.backends.base",
+        "description": "flask_caching.backends.base",
+        "isExtraImport": true,
+        "detail": "flask_caching.backends.base",
+        "documentation": {}
+    },
+    {
+        "label": "BaseCache",
+        "importPath": "flask_caching.backends.base",
+        "description": "flask_caching.backends.base",
+        "isExtraImport": true,
+        "detail": "flask_caching.backends.base",
+        "documentation": {}
+    },
+    {
+        "label": "BaseCache",
+        "importPath": "flask_caching.backends.base",
+        "description": "flask_caching.backends.base",
+        "isExtraImport": true,
+        "detail": "flask_caching.backends.base",
+        "documentation": {}
+    },
+    {
+        "label": "BaseCache",
+        "importPath": "flask_caching.backends.base",
+        "description": "flask_caching.backends.base",
+        "isExtraImport": true,
+        "detail": "flask_caching.backends.base",
+        "documentation": {}
+    },
+    {
+        "label": "UWSGICache",
+        "importPath": "flask_caching.contrib.uwsgicache",
+        "description": "flask_caching.contrib.uwsgicache",
+        "isExtraImport": true,
+        "detail": "flask_caching.contrib.uwsgicache",
+        "documentation": {}
+    },
+    {
+        "label": "Extension",
+        "importPath": "jinja2.ext",
+        "description": "jinja2.ext",
+        "isExtraImport": true,
+        "detail": "jinja2.ext",
         "documentation": {}
     },
     {
@@ -4934,12 +5247,12 @@
         "documentation": {}
     },
     {
-        "label": "struct",
+        "label": "bisect",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "struct",
-        "description": "struct",
-        "detail": "struct",
+        "importPath": "bisect",
+        "description": "bisect",
+        "detail": "bisect",
         "documentation": {}
     },
     {
@@ -4992,15 +5305,6 @@
         "importPath": "marshal",
         "description": "marshal",
         "detail": "marshal",
-        "documentation": {}
-    },
-    {
-        "label": "pickle",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pickle",
-        "description": "pickle",
-        "detail": "pickle",
         "documentation": {}
     },
     {
@@ -5977,11 +6281,20 @@
         "documentation": {}
     },
     {
+        "label": "cached_with_logging",
+        "kind": 2,
+        "importPath": ".vercel.cache.index.api.index",
+        "description": ".vercel.cache.index.api.index",
+        "peekOfCode": "def cached_with_logging(timeout=3600, query_string=True):\n    def decorator(f):\n        @functools.wraps(f)\n        def decorated_function(*args, **kwargs):\n            # Update total requests counter\n            cache_stats['total_requests'] += 1\n            # Generate a cache key similar to what Flask-Caching would use\n            cache_key = request.path\n            if query_string:\n                cache_key = cache_key + '?' + request.query_string.decode('utf-8')",
+        "detail": ".vercel.cache.index.api.index",
+        "documentation": {}
+    },
+    {
         "label": "index",
         "kind": 2,
         "importPath": ".vercel.cache.index.api.index",
         "description": ".vercel.cache.index.api.index",
-        "peekOfCode": "def index():\n    logger.info(\"Request to index endpoint\")\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])\ndef get_works():\n    \"\"\"\n    Endpoint to retrieve publications from the University of Johannesburg with pagination.\n    A query parameter 'page' can be provided by the frontend to load different pages.\n    \"\"\"\n    start_time = time.time()",
+        "peekOfCode": "def index():\n    logger.info(\"Request to index endpoint\")\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])\n@cached_with_logging(timeout=3600, query_string=True)  # Cache for 1 hour, vary by query string\ndef get_works():\n    \"\"\"\n    Endpoint to retrieve publications from the University of Johannesburg with pagination.\n    A query parameter 'page' can be provided by the frontend to load different pages.\n    \"\"\"",
         "detail": ".vercel.cache.index.api.index",
         "documentation": {}
     },
@@ -6008,7 +6321,7 @@
         "kind": 2,
         "importPath": ".vercel.cache.index.api.index",
         "description": ".vercel.cache.index.api.index",
-        "peekOfCode": "def test():\n    logger.info(\"Request to test endpoint\")\n    return jsonify({\"message\": \"Test successful\"})\n@app.route(\"/autocomplete_author\", methods=[\"GET\"])\ndef autocomplete_author():\n    \"\"\"\n    Returns autocomplete suggestions for authors based on partial input.\n    Example usage: /autocomplete_author?author=John\n    \"\"\"\n    start_time = time.time()",
+        "peekOfCode": "def test():\n    logger.info(\"Request to test endpoint\")\n    return jsonify({\"message\": \"Test successful\"})\n@app.route(\"/autocomplete_author\", methods=[\"GET\"])\n@cached_with_logging(timeout=1800, query_string=True)  # Cache for 30 minutes, vary by query string\ndef autocomplete_author():\n    \"\"\"\n    Returns autocomplete suggestions for authors based on partial input.\n    Example usage: /autocomplete_author?author=John\n    \"\"\"",
         "detail": ".vercel.cache.index.api.index",
         "documentation": {}
     },
@@ -6026,7 +6339,7 @@
         "kind": 2,
         "importPath": ".vercel.cache.index.api.index",
         "description": ".vercel.cache.index.api.index",
-        "peekOfCode": "def works_by_author():\n    \"\"\"\n    Fetches works associated with an author using the selected author ID.\n    Example usage: /author/works?author_id=AUTH_ID\n    \"\"\"\n    start_time = time.time()\n    author_id = request.args.get(\"author_id\")\n    logger.info(f\"Request to works_by_author endpoint - author_id: {author_id}\")\n    if not author_id:\n        logger.warning(\"works_by_author called without author_id parameter\")",
+        "peekOfCode": "def works_by_author():\n    \"\"\"\n    Fetches works associated with an author using the selected author ID.\n    Example usage: /author/works?author_id=AUTH_ID&page=1&per_page=10\n    \"\"\"\n    start_time = time.time()\n    author_id = request.args.get(\"author_id\")\n    page = request.args.get(\"page\", default=1, type=int)\n    per_page = request.args.get(\"per_page\", default=10, type=int)\n    logger.info(f\"Request to works_by_author endpoint - author_id: {author_id}, page: {page}, per_page: {per_page}\")",
         "detail": ".vercel.cache.index.api.index",
         "documentation": {}
     },
@@ -6067,11 +6380,29 @@
         "documentation": {}
     },
     {
+        "label": "get_cache_stats",
+        "kind": 2,
+        "importPath": ".vercel.cache.index.api.index",
+        "description": ".vercel.cache.index.api.index",
+        "peekOfCode": "def get_cache_stats():\n    \"\"\"\n    Returns statistics about the cache performance.\n    \"\"\"\n    hit_rate = 0\n    if cache_stats['total_requests'] > 0:\n        hit_rate = (cache_stats['hits'] / cache_stats['total_requests']) * 100\n    stats = {\n        'hits': cache_stats['hits'],\n        'misses': cache_stats['misses'],",
+        "detail": ".vercel.cache.index.api.index",
+        "documentation": {}
+    },
+    {
+        "label": "clear_cache",
+        "kind": 2,
+        "importPath": ".vercel.cache.index.api.index",
+        "description": ".vercel.cache.index.api.index",
+        "peekOfCode": "def clear_cache():\n    \"\"\"\n    Clears the entire cache and resets statistics.\n    This endpoint should be protected in production.\n    \"\"\"\n    # Clear the cache\n    cache.clear()\n    # Reset statistics\n    cache_stats['hits'] = 0\n    cache_stats['misses'] = 0",
+        "detail": ".vercel.cache.index.api.index",
+        "documentation": {}
+    },
+    {
         "label": "logger",
         "kind": 5,
         "importPath": ".vercel.cache.index.api.index",
         "description": ".vercel.cache.index.api.index",
-        "peekOfCode": "logger = logging.getLogger('oross_api')\napp = Flask(__name__)\n# CORS(app, resources={r\"/*\": {\"origins\": \"*\"}})\nCORS(app)\nUSER_AGENT = \"MyScript (your-email@example.com)\"\n@app.route(\"/\")\ndef index():\n    logger.info(\"Request to index endpoint\")\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])",
+        "peekOfCode": "logger = logging.getLogger('oross_api')\napp = Flask(__name__)\n# CORS(app, resources={r\"/*\": {\"origins\": \"*\"}})\nCORS(app)\n# Configure caching\ncache = Cache(app, config={\n    'CACHE_TYPE': 'SimpleCache',\n    'CACHE_DEFAULT_TIMEOUT': 3600  # Cache timeout in seconds (1 hour)\n})\n# Add global counters for cache statistics",
         "detail": ".vercel.cache.index.api.index",
         "documentation": {}
     },
@@ -6080,7 +6411,25 @@
         "kind": 5,
         "importPath": ".vercel.cache.index.api.index",
         "description": ".vercel.cache.index.api.index",
-        "peekOfCode": "app = Flask(__name__)\n# CORS(app, resources={r\"/*\": {\"origins\": \"*\"}})\nCORS(app)\nUSER_AGENT = \"MyScript (your-email@example.com)\"\n@app.route(\"/\")\ndef index():\n    logger.info(\"Request to index endpoint\")\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])\ndef get_works():",
+        "peekOfCode": "app = Flask(__name__)\n# CORS(app, resources={r\"/*\": {\"origins\": \"*\"}})\nCORS(app)\n# Configure caching\ncache = Cache(app, config={\n    'CACHE_TYPE': 'SimpleCache',\n    'CACHE_DEFAULT_TIMEOUT': 3600  # Cache timeout in seconds (1 hour)\n})\n# Add global counters for cache statistics\ncache_stats = {",
+        "detail": ".vercel.cache.index.api.index",
+        "documentation": {}
+    },
+    {
+        "label": "cache",
+        "kind": 5,
+        "importPath": ".vercel.cache.index.api.index",
+        "description": ".vercel.cache.index.api.index",
+        "peekOfCode": "cache = Cache(app, config={\n    'CACHE_TYPE': 'SimpleCache',\n    'CACHE_DEFAULT_TIMEOUT': 3600  # Cache timeout in seconds (1 hour)\n})\n# Add global counters for cache statistics\ncache_stats = {\n    'hits': 0,\n    'misses': 0,\n    'total_requests': 0\n}",
+        "detail": ".vercel.cache.index.api.index",
+        "documentation": {}
+    },
+    {
+        "label": "cache_stats",
+        "kind": 5,
+        "importPath": ".vercel.cache.index.api.index",
+        "description": ".vercel.cache.index.api.index",
+        "peekOfCode": "cache_stats = {\n    'hits': 0,\n    'misses': 0,\n    'total_requests': 0\n}\n# Create a decorator that will log cache hits/misses and also cache the response\ndef cached_with_logging(timeout=3600, query_string=True):\n    def decorator(f):\n        @functools.wraps(f)\n        def decorated_function(*args, **kwargs):",
         "detail": ".vercel.cache.index.api.index",
         "documentation": {}
     },
@@ -6089,7 +6438,7 @@
         "kind": 5,
         "importPath": ".vercel.cache.index.api.index",
         "description": ".vercel.cache.index.api.index",
-        "peekOfCode": "USER_AGENT = \"MyScript (your-email@example.com)\"\n@app.route(\"/\")\ndef index():\n    logger.info(\"Request to index endpoint\")\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])\ndef get_works():\n    \"\"\"\n    Endpoint to retrieve publications from the University of Johannesburg with pagination.\n    A query parameter 'page' can be provided by the frontend to load different pages.",
+        "peekOfCode": "USER_AGENT = \"MyScript (your-email@example.com)\"\n@app.route(\"/\")\ndef index():\n    logger.info(\"Request to index endpoint\")\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])\n@cached_with_logging(timeout=3600, query_string=True)  # Cache for 1 hour, vary by query string\ndef get_works():\n    \"\"\"\n    Endpoint to retrieve publications from the University of Johannesburg with pagination.",
         "detail": ".vercel.cache.index.api.index",
         "documentation": {}
     },
@@ -6190,6 +6539,123 @@
         "description": ".vercel.cache.index.blinker.base",
         "peekOfCode": "ANY_ID = 0\nclass Signal:\n    \"\"\"A notification emitter.\n    :param doc: The docstring for the signal.\n    \"\"\"\n    ANY = ANY\n    \"\"\"An alias for the :data:`~blinker.ANY` sender symbol.\"\"\"\n    set_class: type[set[t.Any]] = set\n    \"\"\"The set class to use for tracking connected receivers and senders.\n    Python's ``set`` is unordered. If receivers must be dispatched in the order",
         "detail": ".vercel.cache.index.blinker.base",
+        "documentation": {}
+    },
+    {
+        "label": "BaseCache",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.cachelib.base",
+        "description": ".vercel.cache.index.cachelib.base",
+        "peekOfCode": "class BaseCache:\n    \"\"\"Baseclass for the cache systems.  All the cache systems implement this\n    API or a superset of it.\n    :param default_timeout: the default timeout (in seconds) that is used if\n                            no timeout is specified on :meth:`set`. A timeout\n                            of 0 indicates that the cache never expires.\n    \"\"\"\n    def __init__(self, default_timeout: int = 300):\n        self.default_timeout = default_timeout\n    def _normalize_timeout(self, timeout: _t.Optional[int]) -> int:",
+        "detail": ".vercel.cache.index.cachelib.base",
+        "documentation": {}
+    },
+    {
+        "label": "NullCache",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.cachelib.base",
+        "description": ".vercel.cache.index.cachelib.base",
+        "peekOfCode": "class NullCache(BaseCache):\n    \"\"\"A cache that doesn't cache.  This can be useful for unit testing.\n    :param default_timeout: a dummy parameter that is ignored but exists\n                            for API compatibility with other caches.\n    \"\"\"\n    def has(self, key: str) -> bool:\n        return False",
+        "detail": ".vercel.cache.index.cachelib.base",
+        "documentation": {}
+    },
+    {
+        "label": "FileSystemCache",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.cachelib.file",
+        "description": ".vercel.cache.index.cachelib.file",
+        "peekOfCode": "class FileSystemCache(BaseCache):\n    \"\"\"A cache that stores the items on the file system.  This cache depends\n    on being the only user of the `cache_dir`.  Make absolutely sure that\n    nobody but this cache stores files there or otherwise the cache will\n    randomly delete files therein.\n    :param cache_dir: the directory where cache files are stored.\n    :param threshold: the maximum number of items the cache stores before\n                      it starts deleting some. A threshold value of 0\n                      indicates no threshold.\n    :param default_timeout: the default timeout that is used if no timeout is",
+        "detail": ".vercel.cache.index.cachelib.file",
+        "documentation": {}
+    },
+    {
+        "label": "MemcachedCache",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.cachelib.memcached",
+        "description": ".vercel.cache.index.cachelib.memcached",
+        "peekOfCode": "class MemcachedCache(BaseCache):\n    \"\"\"A cache that uses memcached as backend.\n    The first argument can either be an object that resembles the API of a\n    :class:`memcache.Client` or a tuple/list of server addresses. In the\n    event that a tuple/list is passed, Werkzeug tries to import the best\n    available memcache library.\n    This cache looks into the following packages/modules to find bindings for\n    memcached:\n        - ``pylibmc``\n        - ``google.appengine.api.memcached``",
+        "detail": ".vercel.cache.index.cachelib.memcached",
+        "documentation": {}
+    },
+    {
+        "label": "_test_memcached_key",
+        "kind": 5,
+        "importPath": ".vercel.cache.index.cachelib.memcached",
+        "description": ".vercel.cache.index.cachelib.memcached",
+        "peekOfCode": "_test_memcached_key = re.compile(r\"[^\\x00-\\x21\\xff]{1,250}$\").match\nclass MemcachedCache(BaseCache):\n    \"\"\"A cache that uses memcached as backend.\n    The first argument can either be an object that resembles the API of a\n    :class:`memcache.Client` or a tuple/list of server addresses. In the\n    event that a tuple/list is passed, Werkzeug tries to import the best\n    available memcache library.\n    This cache looks into the following packages/modules to find bindings for\n    memcached:\n        - ``pylibmc``",
+        "detail": ".vercel.cache.index.cachelib.memcached",
+        "documentation": {}
+    },
+    {
+        "label": "RedisCache",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.cachelib.redis",
+        "description": ".vercel.cache.index.cachelib.redis",
+        "peekOfCode": "class RedisCache(BaseCache):\n    \"\"\"Uses the Redis key-value store as a cache backend.\n    The first argument can be either a string denoting address of the Redis\n    server or an object resembling an instance of a redis.Redis class.\n    Note: Python Redis API already takes care of encoding unicode strings on\n    the fly.\n    :param host: address of the Redis server or an object which API is\n                 compatible with the official Python Redis client (redis-py).\n    :param port: port number on which Redis server listens for connections.\n    :param password: password authentication for the Redis server.",
+        "detail": ".vercel.cache.index.cachelib.redis",
+        "documentation": {}
+    },
+    {
+        "label": "BaseSerializer",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.cachelib.serializers",
+        "description": ".vercel.cache.index.cachelib.serializers",
+        "peekOfCode": "class BaseSerializer:\n    \"\"\"This is the base interface for all default serializers.\n    BaseSerializer.load and BaseSerializer.dump will\n    default to pickle.load and pickle.dump. This is currently\n    used only by FileSystemCache which dumps/loads to/from a file stream.\n    \"\"\"\n    def _warn(self, e: pickle.PickleError) -> None:\n        logging.warning(\n            f\"An exception has been raised during a pickling operation: {e}\"\n        )",
+        "detail": ".vercel.cache.index.cachelib.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "UWSGISerializer",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.cachelib.serializers",
+        "description": ".vercel.cache.index.cachelib.serializers",
+        "peekOfCode": "class UWSGISerializer(BaseSerializer):\n    \"\"\"Default serializer for UWSGICache.\"\"\"\nclass SimpleSerializer(BaseSerializer):\n    \"\"\"Default serializer for SimpleCache.\"\"\"\nclass FileSystemSerializer(BaseSerializer):\n    \"\"\"Default serializer for FileSystemCache.\"\"\"\nclass RedisSerializer(BaseSerializer):\n    \"\"\"Default serializer for RedisCache.\"\"\"\n    def dumps(self, value: _t.Any, protocol: int = pickle.HIGHEST_PROTOCOL) -> bytes:\n        \"\"\"Dumps an object into a string for redis. By default it serializes",
+        "detail": ".vercel.cache.index.cachelib.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleSerializer",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.cachelib.serializers",
+        "description": ".vercel.cache.index.cachelib.serializers",
+        "peekOfCode": "class SimpleSerializer(BaseSerializer):\n    \"\"\"Default serializer for SimpleCache.\"\"\"\nclass FileSystemSerializer(BaseSerializer):\n    \"\"\"Default serializer for FileSystemCache.\"\"\"\nclass RedisSerializer(BaseSerializer):\n    \"\"\"Default serializer for RedisCache.\"\"\"\n    def dumps(self, value: _t.Any, protocol: int = pickle.HIGHEST_PROTOCOL) -> bytes:\n        \"\"\"Dumps an object into a string for redis. By default it serializes\n        integers as regular string and pickle dumps everything else.\n        \"\"\"",
+        "detail": ".vercel.cache.index.cachelib.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "FileSystemSerializer",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.cachelib.serializers",
+        "description": ".vercel.cache.index.cachelib.serializers",
+        "peekOfCode": "class FileSystemSerializer(BaseSerializer):\n    \"\"\"Default serializer for FileSystemCache.\"\"\"\nclass RedisSerializer(BaseSerializer):\n    \"\"\"Default serializer for RedisCache.\"\"\"\n    def dumps(self, value: _t.Any, protocol: int = pickle.HIGHEST_PROTOCOL) -> bytes:\n        \"\"\"Dumps an object into a string for redis. By default it serializes\n        integers as regular string and pickle dumps everything else.\n        \"\"\"\n        return b\"!\" + pickle.dumps(value, protocol)\n    def loads(self, value: _t.Optional[bytes]) -> _t.Any:",
+        "detail": ".vercel.cache.index.cachelib.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "RedisSerializer",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.cachelib.serializers",
+        "description": ".vercel.cache.index.cachelib.serializers",
+        "peekOfCode": "class RedisSerializer(BaseSerializer):\n    \"\"\"Default serializer for RedisCache.\"\"\"\n    def dumps(self, value: _t.Any, protocol: int = pickle.HIGHEST_PROTOCOL) -> bytes:\n        \"\"\"Dumps an object into a string for redis. By default it serializes\n        integers as regular string and pickle dumps everything else.\n        \"\"\"\n        return b\"!\" + pickle.dumps(value, protocol)\n    def loads(self, value: _t.Optional[bytes]) -> _t.Any:\n        \"\"\"The reversal of :meth:`dump_object`. This might be called with\n        None.",
+        "detail": ".vercel.cache.index.cachelib.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleCache",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.cachelib.simple",
+        "description": ".vercel.cache.index.cachelib.simple",
+        "peekOfCode": "class SimpleCache(BaseCache):\n    \"\"\"Simple memory cache for single process environments.  This class exists\n    mainly for the development server and is not 100% thread safe.  It tries\n    to use as many atomic operations as possible and no locks for simplicity\n    but it could happen under heavy load that keys are added multiple times.\n    :param threshold: the maximum number of items the cache stores before\n                      it starts deleting some.\n    :param default_timeout: the default timeout that is used if no timeout is\n                            specified on :meth:`~BaseCache.set`. A timeout of\n                            0 indicates that the cache never expires.",
+        "detail": ".vercel.cache.index.cachelib.simple",
+        "documentation": {}
+    },
+    {
+        "label": "UWSGICache",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.cachelib.uwsgi",
+        "description": ".vercel.cache.index.cachelib.uwsgi",
+        "peekOfCode": "class UWSGICache(BaseCache):\n    \"\"\"Implements the cache using uWSGI's caching framework.\n    .. note::\n        This class cannot be used when running under PyPy, because the uWSGI\n        API implementation for PyPy is lacking the needed functionality.\n    :param default_timeout: The default timeout in seconds.\n    :param cache: The name of the caching instance to connect to, for\n        example: mycache@localhost:3031, defaults to an empty string, which\n        means uWSGI will cache in the local instance. If the cache is in the\n        same instance as the werkzeug app, you only have to provide the name of",
+        "detail": ".vercel.cache.index.cachelib.uwsgi",
         "documentation": {}
     },
     {
@@ -10546,6 +11012,276 @@
         "description": ".vercel.cache.index.flask.wrappers",
         "peekOfCode": "class Response(ResponseBase):\n    \"\"\"The response object that is used by default in Flask.  Works like the\n    response object from Werkzeug but is set to have an HTML mimetype by\n    default.  Quite often you don't have to create this object yourself because\n    :meth:`~flask.Flask.make_response` will take care of that for you.\n    If you want to replace the response object used you can subclass this and\n    set :attr:`~flask.Flask.response_class` to your subclass.\n    .. versionchanged:: 1.0\n        JSON support is added to the response, like the request. This is useful\n        when testing to get the test client response data as JSON.",
         "detail": ".vercel.cache.index.flask.wrappers",
+        "documentation": {}
+    },
+    {
+        "label": "BaseCache",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.flask_caching.backends.base",
+        "description": ".vercel.cache.index.flask_caching.backends.base",
+        "peekOfCode": "class BaseCache(CachelibBaseCache):\n    \"\"\"Baseclass for the cache systems.  All the cache systems implement this\n    API or a superset of it.\n    :param default_timeout: The default timeout (in seconds) that is used if\n                            no timeout is specified on :meth:`set`. A timeout\n                            of 0 indicates that the cache never expires.\n    \"\"\"\n    def __init__(self, default_timeout=300):\n        CachelibBaseCache.__init__(self, default_timeout=default_timeout)\n        self.ignore_errors = False",
+        "detail": ".vercel.cache.index.flask_caching.backends.base",
+        "documentation": {}
+    },
+    {
+        "label": "FileSystemCache",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.flask_caching.backends.filesystemcache",
+        "description": ".vercel.cache.index.flask_caching.backends.filesystemcache",
+        "peekOfCode": "class FileSystemCache(BaseCache, CachelibFileSystemCache):\n    \"\"\"A cache that stores the items on the file system.  This cache depends\n    on being the only user of the `cache_dir`.  Make absolutely sure that\n    nobody but this cache stores files there or otherwise the cache will\n    randomly delete files therein.\n    :param cache_dir: the directory where cache files are stored.\n    :param threshold: the maximum number of items the cache stores before\n                      it starts deleting some. A threshold value of 0\n                      indicates no threshold.\n    :param default_timeout: the default timeout that is used if no timeout is",
+        "detail": ".vercel.cache.index.flask_caching.backends.filesystemcache",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": ".vercel.cache.index.flask_caching.backends.filesystemcache",
+        "description": ".vercel.cache.index.flask_caching.backends.filesystemcache",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass FileSystemCache(BaseCache, CachelibFileSystemCache):\n    \"\"\"A cache that stores the items on the file system.  This cache depends\n    on being the only user of the `cache_dir`.  Make absolutely sure that\n    nobody but this cache stores files there or otherwise the cache will\n    randomly delete files therein.\n    :param cache_dir: the directory where cache files are stored.\n    :param threshold: the maximum number of items the cache stores before\n                      it starts deleting some. A threshold value of 0\n                      indicates no threshold.",
+        "detail": ".vercel.cache.index.flask_caching.backends.filesystemcache",
+        "documentation": {}
+    },
+    {
+        "label": "MemcachedCache",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.flask_caching.backends.memcache",
+        "description": ".vercel.cache.index.flask_caching.backends.memcache",
+        "peekOfCode": "class MemcachedCache(BaseCache, CachelibMemcachedCache):\n    \"\"\"A cache that uses memcached as backend.\n    The first argument can either be an object that resembles the API of a\n    :class:`memcache.Client` or a tuple/list of server addresses. In the\n    event that a tuple/list is passed, Werkzeug tries to import the best\n    available memcache library.\n    This cache looks into the following packages/modules to find bindings for\n    memcached:\n        - ``pylibmc``\n        - ``google.appengine.api.memcached``",
+        "detail": ".vercel.cache.index.flask_caching.backends.memcache",
+        "documentation": {}
+    },
+    {
+        "label": "SASLMemcachedCache",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.flask_caching.backends.memcache",
+        "description": ".vercel.cache.index.flask_caching.backends.memcache",
+        "peekOfCode": "class SASLMemcachedCache(MemcachedCache):\n    def __init__(\n        self,\n        servers=None,\n        default_timeout=300,\n        key_prefix=None,\n        username=None,\n        password=None,\n        **kwargs,\n    ):",
+        "detail": ".vercel.cache.index.flask_caching.backends.memcache",
+        "documentation": {}
+    },
+    {
+        "label": "SpreadSASLMemcachedCache",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.flask_caching.backends.memcache",
+        "description": ".vercel.cache.index.flask_caching.backends.memcache",
+        "peekOfCode": "class SpreadSASLMemcachedCache(SASLMemcachedCache):\n    \"\"\"Simple Subclass of SASLMemcached client that will spread the value\n    across multiple keys if they are bigger than a given threshold.\n    Spreading requires using pickle to store the value, which can significantly\n    impact the performance.\n    \"\"\"\n    def __init__(self, *args, **kwargs):\n        \"\"\"\n        Kwargs:\n            chunksize (int): max length of a pickled object that can fit in",
+        "detail": ".vercel.cache.index.flask_caching.backends.memcache",
+        "documentation": {}
+    },
+    {
+        "label": "_test_memcached_key",
+        "kind": 5,
+        "importPath": ".vercel.cache.index.flask_caching.backends.memcache",
+        "description": ".vercel.cache.index.flask_caching.backends.memcache",
+        "peekOfCode": "_test_memcached_key = re.compile(r\"[^\\x00-\\x21\\xff]{1,250}$\").match\nclass MemcachedCache(BaseCache, CachelibMemcachedCache):\n    \"\"\"A cache that uses memcached as backend.\n    The first argument can either be an object that resembles the API of a\n    :class:`memcache.Client` or a tuple/list of server addresses. In the\n    event that a tuple/list is passed, Werkzeug tries to import the best\n    available memcache library.\n    This cache looks into the following packages/modules to find bindings for\n    memcached:\n        - ``pylibmc``",
+        "detail": ".vercel.cache.index.flask_caching.backends.memcache",
+        "documentation": {}
+    },
+    {
+        "label": "NullCache",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.flask_caching.backends.nullcache",
+        "description": ".vercel.cache.index.flask_caching.backends.nullcache",
+        "peekOfCode": "class NullCache(BaseCache):\n    \"\"\"A cache that doesn't cache. This can be useful for unit testing.\n    :param default_timeout: a dummy parameter that is ignored but exists\n                            for API compatibility with other caches.\n    \"\"\"\n    def has(self, key):\n        return False",
+        "detail": ".vercel.cache.index.flask_caching.backends.nullcache",
+        "documentation": {}
+    },
+    {
+        "label": "RedisCache",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.flask_caching.backends.rediscache",
+        "description": ".vercel.cache.index.flask_caching.backends.rediscache",
+        "peekOfCode": "class RedisCache(BaseCache, CachelibRedisCache):\n    \"\"\"Uses the Redis key-value store as a cache backend.\n    The first argument can be either a string denoting address of the Redis\n    server or an object resembling an instance of a redis.Redis class.\n    Note: Python Redis API already takes care of encoding unicode strings on\n    the fly.\n    :param host: address of the Redis server or an object which API is\n                 compatible with the official Python Redis client (redis-py).\n    :param port: port number on which Redis server listens for connections.\n    :param password: password authentication for the Redis server.",
+        "detail": ".vercel.cache.index.flask_caching.backends.rediscache",
+        "documentation": {}
+    },
+    {
+        "label": "RedisSentinelCache",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.flask_caching.backends.rediscache",
+        "description": ".vercel.cache.index.flask_caching.backends.rediscache",
+        "peekOfCode": "class RedisSentinelCache(RedisCache):\n    \"\"\"Uses the Redis key-value store as a cache backend.\n    The first argument can be either a string denoting address of the Redis\n    server or an object resembling an instance of a redis.Redis class.\n    Note: Python Redis API already takes care of encoding unicode strings on\n    the fly.\n    :param sentinels: A list or a tuple of Redis sentinel addresses.\n    :param master: The name of the master server in a sentinel configuration.\n    :param password: password authentication for the Redis server.\n    :param db: db (zero-based numeric index) on Redis Server to connect.",
+        "detail": ".vercel.cache.index.flask_caching.backends.rediscache",
+        "documentation": {}
+    },
+    {
+        "label": "RedisClusterCache",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.flask_caching.backends.rediscache",
+        "description": ".vercel.cache.index.flask_caching.backends.rediscache",
+        "peekOfCode": "class RedisClusterCache(RedisCache):\n    \"\"\"Uses the Redis key-value store as a cache backend.\n    The first argument can be either a string denoting address of the Redis\n    server or an object resembling an instance of a rediscluster.RedisCluster\n    class.\n    Note: Python Redis API already takes care of encoding unicode strings on\n    the fly.\n    :param cluster: The redis cluster nodes address separated by comma.\n                    e.g. host1:port1,host2:port2,host3:port3 .\n    :param password: password authentication for the Redis server.",
+        "detail": ".vercel.cache.index.flask_caching.backends.rediscache",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleCache",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.flask_caching.backends.simplecache",
+        "description": ".vercel.cache.index.flask_caching.backends.simplecache",
+        "peekOfCode": "class SimpleCache(BaseCache, CachelibSimpleCache):\n    \"\"\"Simple memory cache for single process environments. This class exists\n    mainly for the development server and is not 100% thread safe.  It tries\n    to use as many atomic operations as possible and no locks for simplicity\n    but it could happen under heavy load that keys are added multiple times.\n    :param threshold: the maximum number of items the cache stores before\n                      it starts deleting some.\n    :param default_timeout: the default timeout that is used if no timeout is\n                            specified on :meth:`~BaseCache.set`. A timeout of\n                            0 indicates that the cache never expires.",
+        "detail": ".vercel.cache.index.flask_caching.backends.simplecache",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": ".vercel.cache.index.flask_caching.backends.simplecache",
+        "description": ".vercel.cache.index.flask_caching.backends.simplecache",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass SimpleCache(BaseCache, CachelibSimpleCache):\n    \"\"\"Simple memory cache for single process environments. This class exists\n    mainly for the development server and is not 100% thread safe.  It tries\n    to use as many atomic operations as possible and no locks for simplicity\n    but it could happen under heavy load that keys are added multiple times.\n    :param threshold: the maximum number of items the cache stores before\n                      it starts deleting some.\n    :param default_timeout: the default timeout that is used if no timeout is\n                            specified on :meth:`~BaseCache.set`. A timeout of",
+        "detail": ".vercel.cache.index.flask_caching.backends.simplecache",
+        "documentation": {}
+    },
+    {
+        "label": "UWSGICache",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.flask_caching.backends.uwsgicache",
+        "description": ".vercel.cache.index.flask_caching.backends.uwsgicache",
+        "peekOfCode": "class UWSGICache(_UWSGICache):\n    def __init__(self, *args, **kwargs):\n        warnings.warn(\n            \"Importing UWSGICache from flask_caching.backends is deprecated, \"\n            \"use flask_caching.contrib.uwsgicache.UWSGICache instead\",\n            category=DeprecationWarning,\n        )\n        super().__init__(*args, **kwargs)",
+        "detail": ".vercel.cache.index.flask_caching.backends.uwsgicache",
+        "documentation": {}
+    },
+    {
+        "label": "GoogleCloudStorageCache",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.flask_caching.contrib.googlecloudstoragecache",
+        "description": ".vercel.cache.index.flask_caching.contrib.googlecloudstoragecache",
+        "peekOfCode": "class GoogleCloudStorageCache(BaseCache):\n    \"\"\"Uses an Google Cloud Storage bucket as a cache backend.\n    Note: User-contributed functionality. This project does not guarantee that\n    this functionality will be maintained or functional at any given time.\n    Note: Cache keys must meet GCS criteria for a valid object name (a sequence\n    of Unicode characters whose UTF-8 encoding is at most 1024 bytes long).\n    Note: Expired cache objects are not automatically purged. If\n    delete_expired_objects_on_read=True, they will be deleted following an\n    attempted read (which reduces performance). Otherwise, you have to delete\n    stale objects yourself. Consider an GCS bucket lifecycle rule or other",
+        "detail": ".vercel.cache.index.flask_caching.contrib.googlecloudstoragecache",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": ".vercel.cache.index.flask_caching.contrib.googlecloudstoragecache",
+        "description": ".vercel.cache.index.flask_caching.contrib.googlecloudstoragecache",
+        "peekOfCode": "logger = logging.getLogger(__name__)\ntry:\n    from google.auth.credentials import AnonymousCredentials\n    from google.cloud import storage, exceptions\nexcept ImportError as e:\n    raise RuntimeError(\"no google-cloud-storage module found\") from e\nclass GoogleCloudStorageCache(BaseCache):\n    \"\"\"Uses an Google Cloud Storage bucket as a cache backend.\n    Note: User-contributed functionality. This project does not guarantee that\n    this functionality will be maintained or functional at any given time.",
+        "detail": ".vercel.cache.index.flask_caching.contrib.googlecloudstoragecache",
+        "documentation": {}
+    },
+    {
+        "label": "UWSGICache",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.flask_caching.contrib.uwsgicache",
+        "description": ".vercel.cache.index.flask_caching.contrib.uwsgicache",
+        "peekOfCode": "class UWSGICache(BaseCache, CachelibUWSGICache):\n    \"\"\"Implements the cache using uWSGI's caching framework.\n    .. note::\n        This class cannot be used when running under PyPy, because the uWSGI\n        API implementation for PyPy is lacking the needed functionality.\n    :param default_timeout: The default timeout in seconds.\n    :param cache: The name of the caching instance to connect to, for\n        example: mycache@localhost:3031, defaults to an empty string, which\n        means uWSGI will use the first cache instance initialized.\n        If the cache is in the same instance as the werkzeug app,",
+        "detail": ".vercel.cache.index.flask_caching.contrib.uwsgicache",
+        "documentation": {}
+    },
+    {
+        "label": "CacheExtension",
+        "kind": 6,
+        "importPath": ".vercel.cache.index.flask_caching.jinja2ext",
+        "description": ".vercel.cache.index.flask_caching.jinja2ext",
+        "peekOfCode": "class CacheExtension(Extension):\n    tags = {\"cache\"}\n    def parse(self, parser):\n        lineno = next(parser.stream).lineno\n        #: Parse timeout\n        args = [parser.parse_expression()]\n        #: Parse fragment name\n        #: Grab the fragment name if it exists\n        #: otherwise, default to the old method of using the templates\n        #: lineno to maintain backwards compatibility.",
+        "detail": ".vercel.cache.index.flask_caching.jinja2ext",
+        "documentation": {}
+    },
+    {
+        "label": "JINJA_CACHE_ATTR_NAME",
+        "kind": 5,
+        "importPath": ".vercel.cache.index.flask_caching.jinja2ext",
+        "description": ".vercel.cache.index.flask_caching.jinja2ext",
+        "peekOfCode": "JINJA_CACHE_ATTR_NAME = \"_template_fragment_cache\"\nclass CacheExtension(Extension):\n    tags = {\"cache\"}\n    def parse(self, parser):\n        lineno = next(parser.stream).lineno\n        #: Parse timeout\n        args = [parser.parse_expression()]\n        #: Parse fragment name\n        #: Grab the fragment name if it exists\n        #: otherwise, default to the old method of using the templates",
+        "detail": ".vercel.cache.index.flask_caching.jinja2ext",
+        "documentation": {}
+    },
+    {
+        "label": "wants_args",
+        "kind": 2,
+        "importPath": ".vercel.cache.index.flask_caching.utils",
+        "description": ".vercel.cache.index.flask_caching.utils",
+        "peekOfCode": "def wants_args(f: Callable) -> bool:\n    \"\"\"Check if the function wants any arguments\"\"\"\n    arg_spec = inspect.getfullargspec(f)\n    return bool(arg_spec.args or arg_spec.varargs or arg_spec.varkw)\ndef get_function_parameters(f: Callable) -> List:\n    \"\"\"Get function parameters\n    :param f\n    :return: Parameter list of function\n    \"\"\"\n    return list(inspect.signature(f).parameters.values())",
+        "detail": ".vercel.cache.index.flask_caching.utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_function_parameters",
+        "kind": 2,
+        "importPath": ".vercel.cache.index.flask_caching.utils",
+        "description": ".vercel.cache.index.flask_caching.utils",
+        "peekOfCode": "def get_function_parameters(f: Callable) -> List:\n    \"\"\"Get function parameters\n    :param f\n    :return: Parameter list of function\n    \"\"\"\n    return list(inspect.signature(f).parameters.values())\ndef get_arg_names(f: Callable) -> List[str]:\n    \"\"\"Return arguments of function\n    :param f:\n    :return: String list of arguments",
+        "detail": ".vercel.cache.index.flask_caching.utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_arg_names",
+        "kind": 2,
+        "importPath": ".vercel.cache.index.flask_caching.utils",
+        "description": ".vercel.cache.index.flask_caching.utils",
+        "peekOfCode": "def get_arg_names(f: Callable) -> List[str]:\n    \"\"\"Return arguments of function\n    :param f:\n    :return: String list of arguments\n    \"\"\"\n    return [\n        parameter.name\n        for parameter in get_function_parameters(f)\n        if parameter.kind == parameter.POSITIONAL_OR_KEYWORD\n    ]",
+        "detail": ".vercel.cache.index.flask_caching.utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_arg_default",
+        "kind": 2,
+        "importPath": ".vercel.cache.index.flask_caching.utils",
+        "description": ".vercel.cache.index.flask_caching.utils",
+        "peekOfCode": "def get_arg_default(f: Callable, position: int):\n    arg = get_function_parameters(f)[position]\n    arg_def = arg.default\n    return arg_def if arg_def != inspect.Parameter.empty else None\ndef get_id(obj):\n    return getattr(obj, \"__caching_id__\", repr)(obj)\ndef function_namespace(f, args=None):\n    \"\"\"Attempts to returns unique namespace for function\"\"\"\n    m_args = get_arg_names(f)\n    instance_token = None",
+        "detail": ".vercel.cache.index.flask_caching.utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_id",
+        "kind": 2,
+        "importPath": ".vercel.cache.index.flask_caching.utils",
+        "description": ".vercel.cache.index.flask_caching.utils",
+        "peekOfCode": "def get_id(obj):\n    return getattr(obj, \"__caching_id__\", repr)(obj)\ndef function_namespace(f, args=None):\n    \"\"\"Attempts to returns unique namespace for function\"\"\"\n    m_args = get_arg_names(f)\n    instance_token = None\n    instance_self = getattr(f, \"__self__\", None)\n    if instance_self and not inspect.isclass(instance_self):\n        instance_token = get_id(f.__self__)\n    elif m_args and m_args[0] == \"self\" and args:",
+        "detail": ".vercel.cache.index.flask_caching.utils",
+        "documentation": {}
+    },
+    {
+        "label": "function_namespace",
+        "kind": 2,
+        "importPath": ".vercel.cache.index.flask_caching.utils",
+        "description": ".vercel.cache.index.flask_caching.utils",
+        "peekOfCode": "def function_namespace(f, args=None):\n    \"\"\"Attempts to returns unique namespace for function\"\"\"\n    m_args = get_arg_names(f)\n    instance_token = None\n    instance_self = getattr(f, \"__self__\", None)\n    if instance_self and not inspect.isclass(instance_self):\n        instance_token = get_id(f.__self__)\n    elif m_args and m_args[0] == \"self\" and args:\n        instance_token = get_id(args[0])\n    module = f.__module__",
+        "detail": ".vercel.cache.index.flask_caching.utils",
+        "documentation": {}
+    },
+    {
+        "label": "make_template_fragment_key",
+        "kind": 2,
+        "importPath": ".vercel.cache.index.flask_caching.utils",
+        "description": ".vercel.cache.index.flask_caching.utils",
+        "peekOfCode": "def make_template_fragment_key(\n    fragment_name: str, vary_on: Optional[List[str]] = None\n) -> str:\n    \"\"\"Make a cache key for a specific fragment name.\"\"\"\n    if vary_on:\n        fragment_name = \"%s_\" % fragment_name\n    else:\n        vary_on = []\n    return TEMPLATE_FRAGMENT_KEY_TEMPLATE % (fragment_name, \"_\".join(vary_on))",
+        "detail": ".vercel.cache.index.flask_caching.utils",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATE_FRAGMENT_KEY_TEMPLATE",
+        "kind": 5,
+        "importPath": ".vercel.cache.index.flask_caching.utils",
+        "description": ".vercel.cache.index.flask_caching.utils",
+        "peekOfCode": "TEMPLATE_FRAGMENT_KEY_TEMPLATE = \"_template_fragment_cache_%s%s\"\n# Used to remove control characters and whitespace from cache keys.\nvalid_chars = set(string.ascii_letters + string.digits + \"_.\")\ndel_chars = \"\".join(c for c in map(chr, range(256)) if c not in valid_chars)\nnull_control = ({k: None for k in del_chars},)\ndef wants_args(f: Callable) -> bool:\n    \"\"\"Check if the function wants any arguments\"\"\"\n    arg_spec = inspect.getfullargspec(f)\n    return bool(arg_spec.args or arg_spec.varargs or arg_spec.varkw)\ndef get_function_parameters(f: Callable) -> List:",
+        "detail": ".vercel.cache.index.flask_caching.utils",
+        "documentation": {}
+    },
+    {
+        "label": "valid_chars",
+        "kind": 5,
+        "importPath": ".vercel.cache.index.flask_caching.utils",
+        "description": ".vercel.cache.index.flask_caching.utils",
+        "peekOfCode": "valid_chars = set(string.ascii_letters + string.digits + \"_.\")\ndel_chars = \"\".join(c for c in map(chr, range(256)) if c not in valid_chars)\nnull_control = ({k: None for k in del_chars},)\ndef wants_args(f: Callable) -> bool:\n    \"\"\"Check if the function wants any arguments\"\"\"\n    arg_spec = inspect.getfullargspec(f)\n    return bool(arg_spec.args or arg_spec.varargs or arg_spec.varkw)\ndef get_function_parameters(f: Callable) -> List:\n    \"\"\"Get function parameters\n    :param f",
+        "detail": ".vercel.cache.index.flask_caching.utils",
+        "documentation": {}
+    },
+    {
+        "label": "del_chars",
+        "kind": 5,
+        "importPath": ".vercel.cache.index.flask_caching.utils",
+        "description": ".vercel.cache.index.flask_caching.utils",
+        "peekOfCode": "del_chars = \"\".join(c for c in map(chr, range(256)) if c not in valid_chars)\nnull_control = ({k: None for k in del_chars},)\ndef wants_args(f: Callable) -> bool:\n    \"\"\"Check if the function wants any arguments\"\"\"\n    arg_spec = inspect.getfullargspec(f)\n    return bool(arg_spec.args or arg_spec.varargs or arg_spec.varkw)\ndef get_function_parameters(f: Callable) -> List:\n    \"\"\"Get function parameters\n    :param f\n    :return: Parameter list of function",
+        "detail": ".vercel.cache.index.flask_caching.utils",
+        "documentation": {}
+    },
+    {
+        "label": "null_control",
+        "kind": 5,
+        "importPath": ".vercel.cache.index.flask_caching.utils",
+        "description": ".vercel.cache.index.flask_caching.utils",
+        "peekOfCode": "null_control = ({k: None for k in del_chars},)\ndef wants_args(f: Callable) -> bool:\n    \"\"\"Check if the function wants any arguments\"\"\"\n    arg_spec = inspect.getfullargspec(f)\n    return bool(arg_spec.args or arg_spec.varargs or arg_spec.varkw)\ndef get_function_parameters(f: Callable) -> List:\n    \"\"\"Get function parameters\n    :param f\n    :return: Parameter list of function\n    \"\"\"",
+        "detail": ".vercel.cache.index.flask_caching.utils",
         "documentation": {}
     },
     {
@@ -22132,11 +22868,20 @@
         "documentation": {}
     },
     {
+        "label": "cached_with_logging",
+        "kind": 2,
+        "importPath": "api.index",
+        "description": "api.index",
+        "peekOfCode": "def cached_with_logging(timeout=3600, query_string=True):\n    def decorator(f):\n        @functools.wraps(f)\n        def decorated_function(*args, **kwargs):\n            # Update total requests counter\n            cache_stats['total_requests'] += 1\n            # Generate a cache key similar to what Flask-Caching would use\n            cache_key = request.path\n            if query_string:\n                cache_key = cache_key + '?' + request.query_string.decode('utf-8')",
+        "detail": "api.index",
+        "documentation": {}
+    },
+    {
         "label": "index",
         "kind": 2,
         "importPath": "api.index",
         "description": "api.index",
-        "peekOfCode": "def index():\n    logger.info(\"Request to index endpoint\")\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])\ndef get_works():\n    \"\"\"\n    Endpoint to retrieve publications from the University of Johannesburg with pagination.\n    A query parameter 'page' can be provided by the frontend to load different pages.\n    \"\"\"\n    start_time = time.time()",
+        "peekOfCode": "def index():\n    logger.info(\"Request to index endpoint\")\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])\n@cached_with_logging(timeout=3600, query_string=True)  # Cache for 1 hour, vary by query string\ndef get_works():\n    \"\"\"\n    Endpoint to retrieve publications from the University of Johannesburg with pagination.\n    A query parameter 'page' can be provided by the frontend to load different pages.\n    \"\"\"",
         "detail": "api.index",
         "documentation": {}
     },
@@ -22163,7 +22908,7 @@
         "kind": 2,
         "importPath": "api.index",
         "description": "api.index",
-        "peekOfCode": "def test():\n    logger.info(\"Request to test endpoint\")\n    return jsonify({\"message\": \"Test successful\"})\n@app.route(\"/autocomplete_author\", methods=[\"GET\"])\ndef autocomplete_author():\n    \"\"\"\n    Returns autocomplete suggestions for authors based on partial input.\n    Example usage: /autocomplete_author?author=John\n    \"\"\"\n    start_time = time.time()",
+        "peekOfCode": "def test():\n    logger.info(\"Request to test endpoint\")\n    return jsonify({\"message\": \"Test successful\"})\n@app.route(\"/autocomplete_author\", methods=[\"GET\"])\n@cached_with_logging(timeout=1800, query_string=True)  # Cache for 30 minutes, vary by query string\ndef autocomplete_author():\n    \"\"\"\n    Returns autocomplete suggestions for authors based on partial input.\n    Example usage: /autocomplete_author?author=John\n    \"\"\"",
         "detail": "api.index",
         "documentation": {}
     },
@@ -22181,7 +22926,7 @@
         "kind": 2,
         "importPath": "api.index",
         "description": "api.index",
-        "peekOfCode": "def works_by_author():\n    \"\"\"\n    Fetches works associated with an author using the selected author ID.\n    Example usage: /author/works?author_id=AUTH_ID\n    \"\"\"\n    start_time = time.time()\n    author_id = request.args.get(\"author_id\")\n    logger.info(f\"Request to works_by_author endpoint - author_id: {author_id}\")\n    if not author_id:\n        logger.warning(\"works_by_author called without author_id parameter\")",
+        "peekOfCode": "def works_by_author():\n    \"\"\"\n    Fetches works associated with an author using the selected author ID.\n    Example usage: /author/works?author_id=AUTH_ID&page=1&per_page=10\n    \"\"\"\n    start_time = time.time()\n    author_id = request.args.get(\"author_id\")\n    page = request.args.get(\"page\", default=1, type=int)\n    per_page = request.args.get(\"per_page\", default=10, type=int)\n    logger.info(f\"Request to works_by_author endpoint - author_id: {author_id}, page: {page}, per_page: {per_page}\")",
         "detail": "api.index",
         "documentation": {}
     },
@@ -22222,11 +22967,29 @@
         "documentation": {}
     },
     {
+        "label": "get_cache_stats",
+        "kind": 2,
+        "importPath": "api.index",
+        "description": "api.index",
+        "peekOfCode": "def get_cache_stats():\n    \"\"\"\n    Returns statistics about the cache performance.\n    \"\"\"\n    hit_rate = 0\n    if cache_stats['total_requests'] > 0:\n        hit_rate = (cache_stats['hits'] / cache_stats['total_requests']) * 100\n    stats = {\n        'hits': cache_stats['hits'],\n        'misses': cache_stats['misses'],",
+        "detail": "api.index",
+        "documentation": {}
+    },
+    {
+        "label": "clear_cache",
+        "kind": 2,
+        "importPath": "api.index",
+        "description": "api.index",
+        "peekOfCode": "def clear_cache():\n    \"\"\"\n    Clears the entire cache and resets statistics.\n    This endpoint should be protected in production.\n    \"\"\"\n    # Clear the cache\n    cache.clear()\n    # Reset statistics\n    cache_stats['hits'] = 0\n    cache_stats['misses'] = 0",
+        "detail": "api.index",
+        "documentation": {}
+    },
+    {
         "label": "logger",
         "kind": 5,
         "importPath": "api.index",
         "description": "api.index",
-        "peekOfCode": "logger = logging.getLogger('oross_api')\napp = Flask(__name__)\n# CORS(app, resources={r\"/*\": {\"origins\": \"*\"}})\nCORS(app)\nUSER_AGENT = \"MyScript (your-email@example.com)\"\n@app.route(\"/\")\ndef index():\n    logger.info(\"Request to index endpoint\")\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])",
+        "peekOfCode": "logger = logging.getLogger('oross_api')\napp = Flask(__name__)\n# CORS(app, resources={r\"/*\": {\"origins\": \"*\"}})\nCORS(app)\n# Configure caching\ncache = Cache(app, config={\n    'CACHE_TYPE': 'SimpleCache',\n    'CACHE_DEFAULT_TIMEOUT': 3600  # Cache timeout in seconds (1 hour)\n})\n# Add global counters for cache statistics",
         "detail": "api.index",
         "documentation": {}
     },
@@ -22235,7 +22998,25 @@
         "kind": 5,
         "importPath": "api.index",
         "description": "api.index",
-        "peekOfCode": "app = Flask(__name__)\n# CORS(app, resources={r\"/*\": {\"origins\": \"*\"}})\nCORS(app)\nUSER_AGENT = \"MyScript (your-email@example.com)\"\n@app.route(\"/\")\ndef index():\n    logger.info(\"Request to index endpoint\")\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])\ndef get_works():",
+        "peekOfCode": "app = Flask(__name__)\n# CORS(app, resources={r\"/*\": {\"origins\": \"*\"}})\nCORS(app)\n# Configure caching\ncache = Cache(app, config={\n    'CACHE_TYPE': 'SimpleCache',\n    'CACHE_DEFAULT_TIMEOUT': 3600  # Cache timeout in seconds (1 hour)\n})\n# Add global counters for cache statistics\ncache_stats = {",
+        "detail": "api.index",
+        "documentation": {}
+    },
+    {
+        "label": "cache",
+        "kind": 5,
+        "importPath": "api.index",
+        "description": "api.index",
+        "peekOfCode": "cache = Cache(app, config={\n    'CACHE_TYPE': 'SimpleCache',\n    'CACHE_DEFAULT_TIMEOUT': 3600  # Cache timeout in seconds (1 hour)\n})\n# Add global counters for cache statistics\ncache_stats = {\n    'hits': 0,\n    'misses': 0,\n    'total_requests': 0\n}",
+        "detail": "api.index",
+        "documentation": {}
+    },
+    {
+        "label": "cache_stats",
+        "kind": 5,
+        "importPath": "api.index",
+        "description": "api.index",
+        "peekOfCode": "cache_stats = {\n    'hits': 0,\n    'misses': 0,\n    'total_requests': 0\n}\n# Create a decorator that will log cache hits/misses and also cache the response\ndef cached_with_logging(timeout=3600, query_string=True):\n    def decorator(f):\n        @functools.wraps(f)\n        def decorated_function(*args, **kwargs):",
         "detail": "api.index",
         "documentation": {}
     },
@@ -22244,7 +23025,7 @@
         "kind": 5,
         "importPath": "api.index",
         "description": "api.index",
-        "peekOfCode": "USER_AGENT = \"MyScript (your-email@example.com)\"\n@app.route(\"/\")\ndef index():\n    logger.info(\"Request to index endpoint\")\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])\ndef get_works():\n    \"\"\"\n    Endpoint to retrieve publications from the University of Johannesburg with pagination.\n    A query parameter 'page' can be provided by the frontend to load different pages.",
+        "peekOfCode": "USER_AGENT = \"MyScript (your-email@example.com)\"\n@app.route(\"/\")\ndef index():\n    logger.info(\"Request to index endpoint\")\n    return \"Hello form OROSS\"\n@app.route(\"/works\", methods=[\"GET\"])\n@cached_with_logging(timeout=3600, query_string=True)  # Cache for 1 hour, vary by query string\ndef get_works():\n    \"\"\"\n    Endpoint to retrieve publications from the University of Johannesburg with pagination.",
         "detail": "api.index",
         "documentation": {}
     }

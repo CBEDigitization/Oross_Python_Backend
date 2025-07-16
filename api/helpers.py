@@ -165,6 +165,7 @@ def format_publication(result):
         if not isinstance(authorship, dict):
             continue
         author = authorship.get("author", {})
+        
         author_position = authorship.get("author_position")
         raw_affiliations = authorship.get("raw_affiliation_strings", [])
         if raw_affiliations and isinstance(raw_affiliations, list):
@@ -175,7 +176,8 @@ def format_publication(result):
             "name": author.get("display_name"),
             "orcid": author.get("orcid"),
             "author_position": author_position,
-            "affiliation": affiliation_data
+            "affiliation": affiliation_data,
+            "author_id": author.get("id")
         })
     
     # Extract additional publication details.

@@ -89,18 +89,27 @@ def get_works():
     """
     Endpoint to retrieve publications from the University of Johannesburg with pagination.
     A query parameter 'page' can be provided by the frontend to load different pages.
+    An optional 'openAlexId' parameter can be provided to filter by author ID.
     """
     start_time = time.time()
     # Get the page number from the query parameters; default to 1 if not provided.
     page = request.args.get("page", default=1, type=int)
     per_page = request.args.get("per_page", default=10, type=int)
+    openAlex_id = request.args.get("openAlexId")
     
-    logger.info(f"Request to get_works endpoint - page: {page}, per_page: {per_page}")
+    logger.info(f"Request to get_works endpoint - page: {page}, per_page: {per_page}, openAlexId: {openAlex_id}")
+
+    # Build filter string
+    filter_conditions = ["authorships.institutions.lineage:i24027795"]
+    if openAlex_id:
+        filter_conditions.append(f"authorships.author.id:{openAlex_id}")
+    
+    filter_string = ",".join(filter_conditions)
 
     url = "https://api.openalex.org/works"
     params = {
         "page": page,
-        "filter": "authorships.institutions.lineage:i24027795",
+        "filter": filter_string,
         "sort": "publication_year:desc",
         "per_page": per_page,
     }
